@@ -5,6 +5,7 @@
 .productContainer {
   height: auto;
   width: 200px;
+  position: relative;
   padding: 10px, auto;
   background-color: rgb(240, 240, 240);
 }
@@ -26,6 +27,32 @@
 }
 .productGird h5 {
   text-align: center;
+}
+.smallFeature {
+  display: none;
+  /* display: flex; */
+}
+.productContainer:hover .smallFeature {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+  transition-property: display;
+  transition-duration: 10s;
+  transition-timing-function: ease-in;
+}
+.feature-icon {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  margin-left: 12px;
+  font-size: 20px;
+}
+.feature-icon:hover {
+  background-color: coral;
 }
 
 .forth-carosuel-div {
@@ -53,7 +80,6 @@
   box-shadow: rgb(51, 51, 51) 0px 0px 2px 0px;
 }
 @media screen and (max-width: 1240px) {
-  
 }
 @media screen and (max-width: 768px) {
   .WgpPQ {

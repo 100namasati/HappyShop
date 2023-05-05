@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../Images/compnay-logo.png";
+import logo from "../Images/logo.png";
 import { FiPhoneCall } from "react-icons/fi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaUser, FaBars } from "react-icons/fa";
@@ -18,6 +18,7 @@ export default class ProjectNavbar extends NavbarController {
         <div className="navbar-container">
           <div className="navbar-logo">
             <img src={logo} alt="company-logo" />
+            <h4>Happy Shop</h4>
           </div>
           <div className="navbar-contact">
             <div className="phone-icon">
@@ -105,20 +106,32 @@ export default class ProjectNavbar extends NavbarController {
                     >
                       <li>
                         <a className="dropdown-item" href="#">
-                          Action
+                          Home Section #01
                         </a>
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
-                          Another action
+                          Home Section #01
                         </a>
                       </li>
                       <li>
-                        <hr className="dropdown-divider" />
+                        <a className="dropdown-item" href="#">
+                          Home Section #02
+                        </a>
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
-                          Something else here
+                          Home Section #03
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Home Section #04
+                        </a>
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Home Section #05
                         </a>
                       </li>
                     </ul>
@@ -138,7 +151,63 @@ export default class ProjectNavbar extends NavbarController {
                       className="dropdown-menu"
                       aria-labelledby="navbarDropdown"
                     >
-                      <li>
+                      <div className="menu-container-list">
+                        <div className="menu-list">
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              Action
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              Another action
+                            </a>
+                          </li>
+
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              Something else here
+                            </a>
+                          </li>
+                        </div>
+                        <div className="menu-list">
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              Action
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              Another action
+                            </a>
+                          </li>
+
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              Something else here
+                            </a>
+                          </li>
+                        </div>
+                        <div className="menu-list">
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              Action
+                            </a>
+                          </li>
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              Another action
+                            </a>
+                          </li>
+
+                          <li>
+                            <a className="dropdown-item" href="#">
+                              Something else here
+                            </a>
+                          </li>
+                        </div>
+                      </div>
+                      {/* <li>
                         <a className="dropdown-item" href="#">
                           Action
                         </a>
@@ -155,7 +224,7 @@ export default class ProjectNavbar extends NavbarController {
                         <a className="dropdown-item" href="#">
                           Something else here
                         </a>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
                   <li className="nav-item dropdown">

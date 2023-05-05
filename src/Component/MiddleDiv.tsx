@@ -64,13 +64,15 @@ export default class MiddleDiv extends Component {
             </Col>
             <Col lg={12} md={24} sm={24}>
               <div className="leftDiv">
-                <div className="leftMiddleItem">
-                  <h3>Colorful Kattel</h3>
-                  <p>Ceramic Product</p>
-                  <a href="#">Explore All</a>
-                </div>
-                <div className="rightMiddleItem">
-                  <img src={Kattle} alt="Kattle" />
+                <div className="hoverEffect">
+                  <div className="leftMiddleItem">
+                    <h3>Colorful Kattel</h3>
+                    <p>Ceramic Product</p>
+                    <a href="#">Explore All</a>
+                  </div>
+                  <div className="rightMiddleItem">
+                    <img src={Kattle} alt="Kattle" />
+                  </div>
                 </div>
               </div>
             </Col>

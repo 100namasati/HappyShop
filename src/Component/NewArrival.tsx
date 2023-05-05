@@ -7,6 +7,8 @@ import bag from "../Images/bag.png";
 import Bowl from "../Images/Bowl.png";
 import shoe from "../Images/shoe.png";
 import woolen from "../Images/woolen.png";
+import { FaRegEye, FaShoppingCart, FaRegHeart } from "react-icons/fa";
+import { MdCompareArrows } from "react-icons/md";
 import { Row, Col } from "antd";
 
 type Props = {};
@@ -64,6 +66,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={book} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -71,6 +87,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={bag} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -82,6 +112,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={shoe} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -89,6 +133,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={shoe} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -100,6 +158,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={woolen} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -107,6 +179,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={book} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -118,6 +204,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={woolen} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -125,6 +225,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={book} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -136,6 +250,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={book} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -143,6 +271,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={bag} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -154,6 +296,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={woolen} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -161,6 +317,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={shoe} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -172,6 +342,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={Bowl} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -179,6 +363,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={book} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -190,6 +388,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={woolen} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
@@ -197,6 +409,20 @@ export default class NewArrival extends Component<Props, States> {
               <Col lg={24} md={24} sm={24} className="productGird">
                 <div className="productContainer">
                   <img src={book} alt="book" />
+                  <div className="smallFeature">
+                    <div className="feature-icon">
+                      <FaRegEye />
+                    </div>
+                    <div className="feature-icon">
+                      <FaShoppingCart />
+                    </div>
+                    <div className="feature-icon">
+                      <FaRegHeart />
+                    </div>
+                    <div className="feature-icon">
+                      <MdCompareArrows />
+                    </div>
+                  </div>
                 </div>
                 <h5>W.unit wise Product</h5>
                 <p>$19.00</p>
