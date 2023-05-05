@@ -9,6 +9,7 @@ import Sider from "./Sider";
 import { Input } from "antd";
 import NavbarController from "./NavbarController";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 const { Search } = Input;
 
 export default class ProjectNavbar extends NavbarController {
@@ -38,9 +39,35 @@ export default class ProjectNavbar extends NavbarController {
             />
           </div>
           <div className="navbar-features">
-            <span>
-              <FaUser />
-            </span>
+            <div  className="navbar-features-usericon-container">
+              <FaUser
+                className="user-profile-icon"
+                onClick={this.openUserMenu}
+              />
+              {this.state.openMenu ? (
+                <div className="user-menu">
+                  <ul className="user-menu-list">
+                    <Link to={"/"} className="user-menu-list-item">
+                      <li>My Account</li>
+                    </Link>
+                    <Link to={"/"} className="user-menu-list-item">
+                      <li>Wishlist</li>
+                    </Link>
+                    <Link to={"/"} className="user-menu-list-item">
+                      <li>Compare</li>
+                    </Link>
+                    <Link to={"/"} className="user-menu-list-item">
+                      <li>Search</li>
+                    </Link>
+                    <Link to={"/"} className="user-menu-list-item">
+                      <li>Login</li>
+                    </Link>
+                  </ul>
+                </div>
+              ) : (
+                ""
+              )}
+            </div>
             <span>
               <Badge size="small" count={5}>
                 <Avatar
