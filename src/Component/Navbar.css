@@ -58,14 +58,9 @@
   width: 20%;
 }
 
-.navbar-features .user-profile-icon:hover + .user-menu {
-  display: block ;
-  /* color: red; */
-  
-}
+
 
 .navbar-features .user-menu{
-  display: none;
 position: absolute;
 background-color: white;
 width: 130px;

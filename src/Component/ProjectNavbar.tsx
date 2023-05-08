@@ -39,7 +39,7 @@ export default class ProjectNavbar extends NavbarController {
             />
           </div>
           <div className="navbar-features">
-            <div  className="navbar-features-usericon-container">
+            <div className="navbar-features-usericon-container">
               <FaUser
                 className="user-profile-icon"
                 onClick={this.openUserMenu}
@@ -59,7 +59,7 @@ export default class ProjectNavbar extends NavbarController {
                     <Link to={"/"} className="user-menu-list-item">
                       <li>Search</li>
                     </Link>
-                    <Link to={"/"} className="user-menu-list-item">
+                    <Link to={"/login"} className="user-menu-list-item">
                       <li>Login</li>
                     </Link>
                   </ul>
