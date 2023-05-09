@@ -4,11 +4,12 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaUser, FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { Badge, Avatar, Drawer } from "antd";
-import Sider from "./Sider";
+import Sider from "../Sider";
 import { Input } from "antd";
 import NavbarController from "./NavbarController";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import Protected from "./Protected";
 const { Search } = Input;
 
 class ProjectNavbar extends NavbarController {
@@ -94,7 +95,7 @@ class ProjectNavbar extends NavbarController {
                     >
                       <li>Search</li>
                     </Link>
-                    {this.state.isTokenAvailable ? (
+                    {Protected() ? (
                       <li
                         className="user-menu-list-item"
                         onClick={() => {

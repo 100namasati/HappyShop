@@ -35,15 +35,20 @@ export default class first extends React.Component<Props, states> {
   }
   componentDidMount(): void {
     let user: any = localStorage.getItem("token");
-    if (user) {
-      this.setState({ isTokenAvailable: true }, () => {
-        // console.log("@@@@@----", this.state.isTokenAvailable);
-      });
-    } else {
-      this.setState({ isTokenAvailable: false }, () => {
-        // console.log("######-----", this.state.isTokenAvailable);
-      });
+    if (user === null) {
+      return this.setState({ isTokenAvailable: false });
+    } else if (user !== "") {
+      return this.setState({ isTokenAvailable: true });
     }
+    // if (user !== "") {
+    //   this.setState({ isTokenAvailable: true }, () => {
+    //     console.log("@@@@@----", this.state.isTokenAvailable);
+    //   });
+    // } else {
+    //   this.setState({ isTokenAvailable: false }, () => {
+    //     console.log("######-----", this.state.isTokenAvailable);
+    //   });
+    // }
     // console.log(this.state.isTokenAvailable);
   }
   openDrawer = () => {
