@@ -1,4 +1,4 @@
-import  { Component } from "react";
+import { Component } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Auth } from "../../firebase_setup/firebase";
 interface States {
@@ -8,6 +8,7 @@ interface States {
   password: string;
 }
 type Props = {
+  router: any;
 };
 export class RegisterController extends Component<Props, States> {
   constructor(props: Props) {
@@ -34,19 +35,6 @@ export class RegisterController extends Component<Props, States> {
         console.log(this.state.email);
         console.log(this.state.phone);
         console.log(this.state.password);
-        // let userDetails = {
-        //   name: this.state.name,
-        //   email: this.state.email,
-        //   phone: this.state.phone,
-        //   password: this.state.password,
-        // };
-        // let newUser: any = {
-        //   name: this.state.name,
-        //   email: this.state.email,
-        //   phone: this.state.phone,
-        //   password: this.state.password,
-        // };
-
         createUserWithEmailAndPassword(
           Auth,
           this.state.email,
@@ -55,8 +43,13 @@ export class RegisterController extends Component<Props, States> {
           .then((res) => {
             // console.log("@@@@_______", res.user.uid);
             localStorage.setItem("token", JSON.stringify(res.user.uid));
+            this.props.router.navigate("/");
           })
-          .catch((err) => console.log(err.message));
+          .catch(async (err) => {
+            console.log(err.message);
+            alert(err.message);
+            await this.props.router.navigate("/login");
+          });
       }
     );
   };

@@ -5,7 +5,11 @@ import {
   FacebookAuthProvider,
   signOut,
 } from "firebase/auth";
-import { Auth, provider, providerFaceBook } from "../firebase_setup/firebase";
+import {
+  Auth,
+  provider,
+  providerFaceBook,
+} from "../../firebase_setup/firebase";
 
 export interface states {
   drawer: boolean;
@@ -18,7 +22,6 @@ export interface states {
 
 export type Props = {
   router: any;
-  isUserAvailable: any;
 };
 export default class first extends React.Component<Props, states> {
   constructor(props: Props) {
@@ -35,20 +38,24 @@ export default class first extends React.Component<Props, states> {
   }
   componentDidMount(): void {
     let user: any = localStorage.getItem("token");
-    if (user) {
-      this.setState({ isTokenAvailable: true }, () => {
-        // console.log("@@@@@----", this.state.isTokenAvailable);
-      });
-    } else {
-      this.setState({ isTokenAvailable: false }, () => {
-        // console.log("######-----", this.state.isTokenAvailable);
-      });
+    if (user === null) {
+      return this.setState({ isTokenAvailable: false });
+    } else if (user !== "") {
+      return this.setState({ isTokenAvailable: true });
     }
+    // if (user !== "") {
+    //   this.setState({ isTokenAvailable: true }, () => {
+    //     console.log("@@@@@----", this.state.isTokenAvailable);
+    //   });
+    // } else {
+    //   this.setState({ isTokenAvailable: false }, () => {
+    //     console.log("######-----", this.state.isTokenAvailable);
+    //   });
+    // }
     // console.log(this.state.isTokenAvailable);
   }
   openDrawer = () => {
     this.setState({ drawer: true });
-    // console.log("@@--", typeof this.state.drawerDirection);
   };
   closeDrawer = () => {
     this.setState({ drawer: false });
