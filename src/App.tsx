@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Home from "./Component/Home";
+import Home from "./Component/Home/Home";
 import "./App.css";
 import ProjectNavbar from "./Component/Navbar/ProjectNavbar";
 import { Route, Routes } from "react-router-dom";
@@ -17,8 +17,7 @@ function App(props: any) {
         <Route path="/" element={<Protected Component={Home} />} />
         <Route path="/Products" element={<Protected Component={Products} />} />
         <Route path="/login" element={<AuthProtected Component={Login} />} />
-        <Route path="/login" element={<AuthProtected Component={Register} />} />
-        s{" "}
+        <Route path="/register" element={<Register />} />
       </Routes>
     </div>
   );

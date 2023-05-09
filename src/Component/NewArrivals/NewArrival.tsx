@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "./NewArrival.css";
 import Carousel from "react-elastic-carousel";
-import book from "../Images/book.png";
-import bag from "../Images/bag.png";
+import book from "../../Images/book.png";
+import bag from "../../Images/bag.png";
 //import hat from "../Images/Hat.png";
-import Bowl from "../Images/Bowl.png";
-import shoe from "../Images/shoe.png";
-import woolen from "../Images/woolen.png";
+import Bowl from "../../Images/Bowl.png";
+import shoe from "../../Images/shoe.png";
+import woolen from "../../Images/woolen.png";
 import { FaRegEye, FaShoppingCart, FaRegHeart } from "react-icons/fa";
 import { MdCompareArrows } from "react-icons/md";
 import { Row, Col } from "antd";

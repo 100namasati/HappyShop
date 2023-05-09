@@ -6,6 +6,8 @@ import {FcGoogle} from 'react-icons/fc';
 import {AiFillTwitterCircle} from 'react-icons/ai'
 import {FaFacebookSquare} from 'react-icons/fa'
 
+import { withRouter } from "../../HOC";
+import { Link } from "react-router-dom";
 export class Login extends LoginController {
   render() {
     return (
@@ -103,6 +105,9 @@ export class Login extends LoginController {
               }}
             >
               <Row style={{ width: "100%" }}>
+                <Col lg={12} md={12} sm={12} xs={12}>
+                  <Link to={"/register"}>Create new account</Link>
+                </Col>
                 <Col
                   lg={24}
                   md={24}
@@ -153,4 +158,4 @@ export class Login extends LoginController {
   }
 }
 
-export default Login;
+export default withRouter(Login);

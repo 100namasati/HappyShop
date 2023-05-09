@@ -2,8 +2,8 @@ import React, { Component } from "react";
 // import Carousel from "react-elastic-carousel";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
-import coffee from "../Images/coffeeImg.png";
-import woolen from "../Images/woolen.png";
+import coffee from "../../Images/coffeeImg.png";
+import woolen from "../../Images/woolen.png";
 import "./HomeSilder.css";
 export class HomeSilder extends Component {
   render() {

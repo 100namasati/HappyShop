@@ -76,8 +76,7 @@ export class LoginController extends Component<Props, States> {
   onFinish = (values: any) => {
     // console.log("Success:", values);
     this.setState({ email: values.email, password: values.password }, () => {
-      console.log("Success:", this.state.email);
-      console.log("Success:", this.state.password);
+     
       signInWithEmailAndPassword(Auth, this.state.email, this.state.password)
         .then(async (res) => {
           // console.log("@@@@_______", res.user.uid);
@@ -86,18 +85,12 @@ export class LoginController extends Component<Props, States> {
             await localStorage.clear();
             await localStorage.setItem("token", JSON.stringify(res.user.uid));
             await this.forceUpdate();
-            console.log("logged in");
 
-            await this.props.router.navigate("/products");
+            await this.props.router.navigate("/");
           } else {
             await localStorage.setItem("token", JSON.stringify(res.user.uid));
-            // this.forceUpdate();
-            console.log("logged in");
-
-            await this.props.router.navigate("/products");
+            await this.props.router.navigate("/");
           }
-
-          // console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;

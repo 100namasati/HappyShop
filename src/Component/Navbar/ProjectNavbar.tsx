@@ -4,24 +4,20 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaUser, FaBars } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import { Badge, Avatar, Drawer } from "antd";
-import Sider from "../Sider";
+import Sider from "../Slider/Sider";
 import { Input } from "antd";
 import NavbarController from "./NavbarController";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Protected from "./Protected";
+import { withRouter } from "../../HOC";
 const { Search } = Input;
 
-export default class ProjectNavbar extends NavbarController {
+class ProjectNavbar extends NavbarController {
   renderNav = () => {
     return (
       <>
-        <div
-          className="navbar-container"
-          onClick={() => {
-            this.setState({ isTokenAvailable: false });
-          }}
-        >
+        <div className="navbar-container">
           <div className="navbar-logo">
             <img src={logo} alt="company-logo" />
             <h4>Happy Shop</h4>
@@ -100,7 +96,7 @@ export default class ProjectNavbar extends NavbarController {
                     >
                       <li>Search</li>
                     </Link>
-                    {Protected() ? (
+                    {this.Protected() ? (
                       <li
                         className="user-menu-list-item"
                         onClick={() => {
@@ -118,7 +114,7 @@ export default class ProjectNavbar extends NavbarController {
                           this.setState({ openMenu: !this.state.openMenu });
                         }}
                       >
-                        <li>Login</li>
+                        <li>Login/Register</li>
                       </Link>
                     )}
                   </ul>
@@ -441,3 +437,4 @@ export default class ProjectNavbar extends NavbarController {
     );
   }
 }
+export default withRouter(ProjectNavbar);
