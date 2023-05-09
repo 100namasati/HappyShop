@@ -3,11 +3,13 @@ import {
   Auth,
   provider,
   providerFaceBook,
+  providerTwitter
 } from "../../firebase_setup/firebase";
 import {
   GoogleAuthProvider,
   signInWithPopup,
   FacebookAuthProvider,
+  TwitterAuthProvider,
   signInWithEmailAndPassword,
 } from "firebase/auth";
 interface States {
@@ -53,6 +55,22 @@ export class LoginController extends Component<Props, States> {
         console.log(error);
       });
   };
+  handleTwitterLogin=()=>{
+    signInWithPopup(Auth,  providerTwitter)
+  .then((result) => {
+    const credential = TwitterAuthProvider.credentialFromResult(result);
+    const user = result.user;
+    
+  }).catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    const email = error.customData.email;
+    const credential = TwitterAuthProvider.credentialFromError(error);
+    console.log(error);
+    
+    // ...
+  });
+  }
   onFinish = (values: any) => {
     // console.log("Success:", values);
     this.setState({ email: values.email, password: values.password }, () => {

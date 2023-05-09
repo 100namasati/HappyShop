@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { Form, Input, Button, Row, Col } from "antd";
 import "./Login.css";
 import LoginController from "./LoginController";
+import {FcGoogle} from 'react-icons/fc';
+import {AiFillTwitterCircle} from 'react-icons/ai'
+import {FaFacebookSquare} from 'react-icons/fa'
 
 export class Login extends LoginController {
   render() {
@@ -10,12 +13,13 @@ export class Login extends LoginController {
         <h1
           style={{
             textAlign: "center",
-            margin: "50px 0px",
+            margin: "20px 0px",
             color: "orangered",
           }}
         >
-          User Login
+         Login
         </h1>
+        <p>Please Login using account detail below.</p>
         <Form
           name="basic"
           labelCol={{ span: 4 }}
@@ -99,43 +103,46 @@ export class Login extends LoginController {
               }}
             >
               <Row style={{ width: "100%" }}>
-                <Col lg={12} md={12} sm={12} xs={12}>
-                  <h6>Create new account</h6>
-                </Col>
                 <Col
-                  lg={12}
-                  md={12}
-                  sm={12}
-                  xs={12}
-                  style={{
-                    display: "flex",
-                    justifyContent: "flex-end",
-                    alignContent: "flex-end",
-                  }}
+                  lg={24}
+                  md={24}
+                  sm={24}
+                  xs={24}
+                  className="loginButton"
                 >
                   <Form.Item>
                     <Button
-                      type="primary"
                       htmlType="submit"
-                      style={{ width: "200px", alignItems: "flex-end" }}
                     >
                       Login
                     </Button>
                   </Form.Item>
                 </Col>
-                <Col lg={12} md={12} sm={12}>
-                  <Form.Item>
-                    <Button onClick={this.handleLogin}>
-                      Sign In with google
+                <Col lg={24} md={24} sm={24}  className="social-section">
+                <hr/>
+                <h6>Or sign Up with</h6>
+                </Col>
+                <Col lg={24} md={24} sm={24}  className="socialLogin">
+                
+                  <Form.Item >
+                  <Button onClick={this.handleLogin}>
+                      <span className="loginIcons"><FcGoogle/></span>
+                  </Button> 
+                  </Form.Item>
+                  <Form.Item >
+                    <Button onClick={this. handleTwitterLogin}>
+                      <span  className="twitterIcons"
+                       ><AiFillTwitterCircle/></span>
+                    </Button>
+                  </Form.Item>
+                  <Form.Item >
+                    <Button onClick={this.handleFacebookLogin}>
+                      <span  className="loginIcons"><FaFacebookSquare/></span>
                     </Button>
                   </Form.Item>
                 </Col>
-                <Col lg={12} md={12} sm={12}>
-                  <Form.Item>
-                    <Button onClick={this.handleFacebookLogin}>
-                      Sign In with FaceBook
-                    </Button>
-                  </Form.Item>
+                <Col lg={24} md={24} sm={24}  className="register-section">
+                  <h6>Sign Up</h6>
                 </Col>
               </Row>
             </Col>

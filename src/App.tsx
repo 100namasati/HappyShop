@@ -7,6 +7,7 @@ import { Route, Routes } from "react-router-dom";
 import Register from "./Component/Register/Register";
 import Login from "./Component/Login/Login";
 import { withRouter } from "./HOC";
+import AccountLogin from "./Component/MyAccount/AccountLogin";
 function App(props: any) {
   const [isUserAvailable, setIsUserAvailable] = useState(false);
   useEffect(() => {
@@ -27,6 +28,7 @@ function App(props: any) {
         <Route path="/" element={<Home {...props} />} />
         <Route path="/login" element={<Login {...props} />} />
         <Route path="/register" element={<Register {...props} />} />
+        <Route path="/myaccount" element={<AccountLogin/>}/>
         <Route path="*" element={<h1>404 page not found</h1>} />
       </Routes>
     </div>

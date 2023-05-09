@@ -53,7 +53,7 @@ export default class ProjectNavbar extends NavbarController {
                 <div className="user-menu">
                   <ul className="user-menu-list">
                     <Link
-                      to={"/"}
+                      to={"/myaccount"}
                       className="user-menu-list-item"
                       onClick={() => {
                         this.setState({ openMenu: !this.state.openMenu });
