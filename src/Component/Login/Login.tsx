@@ -2,12 +2,11 @@ import React, { Component } from "react";
 import { Form, Input, Button, Row, Col } from "antd";
 import "./Login.css";
 import LoginController from "./LoginController";
-import {FcGoogle} from 'react-icons/fc';
-import {AiFillTwitterCircle} from 'react-icons/ai'
-import {FaFacebookSquare} from 'react-icons/fa'
-
+import { FcGoogle } from "react-icons/fc";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { FaFacebookSquare } from "react-icons/fa";
 import { withRouter } from "../../HOC";
-import { Link } from "react-router-dom";
+
 export class Login extends LoginController {
   render() {
     return (
@@ -19,7 +18,7 @@ export class Login extends LoginController {
             color: "orangered",
           }}
         >
-         Login
+          Login
         </h1>
         <p>Please Login using account detail below.</p>
         <Form
@@ -105,48 +104,39 @@ export class Login extends LoginController {
               }}
             >
               <Row style={{ width: "100%" }}>
-                <Col lg={12} md={12} sm={12} xs={12}>
-                  <Link to={"/register"}>Create new account</Link>
-                </Col>
-                <Col
-                  lg={24}
-                  md={24}
-                  sm={24}
-                  xs={24}
-                  className="loginButton"
-                >
+                <Col lg={24} md={24} sm={24} xs={24} className="loginButton">
                   <Form.Item>
-                    <Button
-                      htmlType="submit"
-                    >
-                      Login
-                    </Button>
+                    <Button htmlType="submit">Login</Button>
                   </Form.Item>
                 </Col>
-                <Col lg={24} md={24} sm={24}  className="social-section">
-                <hr/>
-                <h6>Or sign Up with</h6>
+                <Col lg={24} md={24} sm={24} className="social-section">
+                  <hr />
+                  <h6>Or sign Up with</h6>
                 </Col>
-                <Col lg={24} md={24} sm={24}  className="socialLogin">
-                
-                  <Form.Item >
-                  <Button onClick={this.handleLogin}>
-                      <span className="loginIcons"><FcGoogle/></span>
-                  </Button> 
-                  </Form.Item>
-                  <Form.Item >
-                    <Button onClick={this. handleTwitterLogin}>
-                      <span  className="twitterIcons"
-                       ><AiFillTwitterCircle/></span>
+                <Col lg={24} md={24} sm={24} className="socialLogin">
+                  <Form.Item>
+                    <Button onClick={this.handleLogin}>
+                      <span className="loginIcons">
+                        <FcGoogle />
+                      </span>
                     </Button>
                   </Form.Item>
-                  <Form.Item >
+                  <Form.Item>
+                    <Button onClick={this.handleTwitterLogin}>
+                      <span className="twitterIcons">
+                        <AiFillTwitterCircle />
+                      </span>
+                    </Button>
+                  </Form.Item>
+                  <Form.Item>
                     <Button onClick={this.handleFacebookLogin}>
-                      <span  className="loginIcons"><FaFacebookSquare/></span>
+                      <span className="loginIcons">
+                        <FaFacebookSquare />
+                      </span>
                     </Button>
                   </Form.Item>
                 </Col>
-                <Col lg={24} md={24} sm={24}  className="register-section">
+                <Col lg={24} md={24} sm={24} className="register-section">
                   <h6>Sign Up</h6>
                 </Col>
               </Row>
