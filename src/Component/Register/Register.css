@@ -4,7 +4,7 @@
     color: #ff4d4f;
 }
 .register-form-container{
-    max-width: 1250px;
+    max-width: 550px;
     margin: auto;
 }
 .register-form .ant-input-affix-wrapper {
@@ -16,6 +16,15 @@
 }
 .register-form .ant-select.ant-select-in-form-item {
     width: 480px !important;
+}
+:where(.css-dev-only-do-not-override-yp8pcc).ant-col-5 {
+    display: block;
+    flex: 0 0 20.833333333333336%;
+    max-width: 100px;
+}
+.ant-form-item-control {
+    flex: 1 1 0;
+    max-width: 200px;
 }
 @media only screen and (max-width: 1200px) {
     .register-form .ant-input-affix-wrapper {

@@ -1,25 +1,10 @@
 import React, { Component } from "react";
 import { Form, Input, Button, Row, Col } from "antd";
-import { addDoc, collection } from "@firebase/firestore"
-import { firestore } from "../firebase_setup/firebase"
 import "./Login.css";
 import LoginController from "./LoginController";
-export class Login extends LoginController {
-  handleSubmit = (testdata) => {
-    const ref = collection(firestore, "test_data"); // Firebase creates this automatically
-    let data = {
-      testData: testdata,
-    };
-    try {
-      addDoc(ref, data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-  render() {
-    // @ts-ignore
-    console.log(firebase);
 
+export class Login extends LoginController {
+  render() {
     return (
       <div className="login-form">
         <h1
@@ -135,6 +120,20 @@ export class Login extends LoginController {
                       style={{ width: "200px", alignItems: "flex-end" }}
                     >
                       Login
+                    </Button>
+                  </Form.Item>
+                </Col>
+                <Col lg={12} md={12} sm={12}>
+                  <Form.Item>
+                    <Button onClick={this.handleLogin}>
+                      Sign In with google
+                    </Button>
+                  </Form.Item>
+                </Col>
+                <Col lg={12} md={12} sm={12}>
+                  <Form.Item>
+                    <Button onClick={this.handleFacebookLogin}>
+                      Sign In with FaceBook
                     </Button>
                   </Form.Item>
                 </Col>

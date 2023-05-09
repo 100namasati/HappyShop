@@ -16,7 +16,12 @@ export default class ProjectNavbar extends NavbarController {
   renderNav = () => {
     return (
       <>
-        <div className="navbar-container">
+        <div
+          className="navbar-container"
+          onClick={() => {
+            this.setState({ isTokenAvailable: false });
+          }}
+        >
           <div className="navbar-logo">
             <img src={logo} alt="company-logo" />
             <h4>Happy Shop</h4>
@@ -47,21 +52,75 @@ export default class ProjectNavbar extends NavbarController {
               {this.state.openMenu ? (
                 <div className="user-menu">
                   <ul className="user-menu-list">
-                    <Link to={"/"} className="user-menu-list-item">
-                      <li>My Account</li>
+                    <Link
+                      to={"/"}
+                      className="user-menu-list-item"
+                      onClick={() => {
+                        this.setState({ openMenu: !this.state.openMenu });
+                      }}
+                    >
+                      <li
+                        onClick={() => {
+                          this.setState({ openMenu: !this.state.openMenu });
+                        }}
+                      >
+                        My Account
+                      </li>
                     </Link>
-                    <Link to={"/"} className="user-menu-list-item">
-                      <li>Wishlist</li>
+                    <Link
+                      to={"/"}
+                      className="user-menu-list-item"
+                      onClick={() => {
+                        this.setState({ openMenu: !this.state.openMenu });
+                      }}
+                    >
+                      <li
+                        onClick={() => {
+                          this.setState({ openMenu: !this.state.openMenu });
+                        }}
+                      >
+                        Wishlist
+                      </li>
                     </Link>
-                    <Link to={"/"} className="user-menu-list-item">
+                    <Link
+                      to={"/"}
+                      className="user-menu-list-item"
+                      onClick={() => {
+                        this.setState({ openMenu: !this.state.openMenu });
+                      }}
+                    >
                       <li>Compare</li>
                     </Link>
-                    <Link to={"/"} className="user-menu-list-item">
+                    <Link
+                      to={"/"}
+                      className="user-menu-list-item"
+                      onClick={() => {
+                        this.setState({ openMenu: !this.state.openMenu });
+                      }}
+                    >
                       <li>Search</li>
                     </Link>
-                    <Link to={"/login"} className="user-menu-list-item">
-                      <li>Login</li>
-                    </Link>
+                    {this.state.isTokenAvailable ? (
+                      <li
+                        className="user-menu-list-item"
+                        onClick={() => {
+                          this.logout();
+                          this.setState({ openMenu: !this.state.openMenu });
+                        }}
+                      >
+                        Logout
+                      </li>
+                    ) : (
+                      <Link
+                        to={"/login"}
+                        className="user-menu-list-item"
+                        onClick={() => {
+                          this.setState({ openMenu: !this.state.openMenu });
+                        }}
+                      >
+                        <li>Login</li>
+                      </Link>
+                    )}
                   </ul>
                 </div>
               ) : (
