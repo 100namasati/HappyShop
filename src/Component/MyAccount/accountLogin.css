@@ -1,4 +1,34 @@
 .myAccount-Navbar{
     background-color: rgb(242, 246, 247);
     height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.myAccount-left{
+    margin-top:10px;
+}
+.myAccount-Navbar h4{
+    padding-left: 30px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+#active{
+    color:coral;
+}
+
+.myAccount-text{
+    display: flex;
+    justify-content: center;
+}
+.myAccount-text span{
+    margin-left: 10px;
+}
+.myAccount-img {
+    margin-top:10px;
+}
+.myAccount-img img{
+    height: 100px;
+    width: 100px;  
 }
