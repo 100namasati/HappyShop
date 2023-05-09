@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Home from "./Component/Home/Home";
+import logo from "./logo.svg";
+import Home from "./Component/Home";
 import "./App.css";
 import ProjectNavbar from "./Component/Navbar/ProjectNavbar";
 import { Route, Routes } from "react-router-dom";

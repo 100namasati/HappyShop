@@ -33,16 +33,19 @@ export default class first extends React.Component<Props, states> {
       openMenu: false,
     };
   }
-  Protected = () => {
-    let isLoggedIn = false;
-    let user = localStorage.getItem("token");
-    if (!user) {
-      isLoggedIn = false;
+  componentDidMount(): void {
+    let user: any = localStorage.getItem("token");
+    if (user) {
+      this.setState({ isTokenAvailable: true }, () => {
+        // console.log("@@@@@----", this.state.isTokenAvailable);
+      });
     } else {
-      isLoggedIn = true;
+      this.setState({ isTokenAvailable: false }, () => {
+        // console.log("######-----", this.state.isTokenAvailable);
+      });
     }
-    return isLoggedIn;
-  };
+    // console.log(this.state.isTokenAvailable);
+  }
   openDrawer = () => {
     this.setState({ drawer: true });
   };

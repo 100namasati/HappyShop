@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import logo from "../../Images/compnay-logo.png";
-import "../Navbar/Navbar.css";
+import logo from "../Images/compnay-logo.png";
+import "./Navbar.css";
 import { AiOutlinePlus } from "react-icons/ai";
 import "./Sider.css";
 import { Input, Menu } from "antd";
