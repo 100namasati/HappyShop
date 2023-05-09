@@ -7,6 +7,7 @@ import {
   getAuth,
   GoogleAuthProvider,
   FacebookAuthProvider,
+  TwitterAuthProvider,
 } from "firebase/auth";
 
 // Your web app's Firebase configuration
@@ -23,6 +24,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const providerFaceBook = new FacebookAuthProvider();
 const provider = new GoogleAuthProvider();
+const providerTwitter = new TwitterAuthProvider();
+
 const Auth = getAuth(app);
 
-export { Auth, provider, providerFaceBook };
+export { Auth, provider, providerFaceBook ,providerTwitter};

@@ -124,6 +124,14 @@ transition: 1s ease-in-out;
   color: black;
   font-weight: 600;
 }
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+padding: 0;
+}
 #feature2 {
   display: none;
   font-size: 25px;
