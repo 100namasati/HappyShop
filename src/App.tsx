@@ -18,14 +18,13 @@ function App(props: any) {
       <Routes>
         <Route path="/" element={<Protected Component={Home} />} />
         <Route path="/Products" element={<Protected Component={Products} />} />
+
         <Route path="/login" element={<AuthProtected Component={Login} />} />
+
+        <Route path="/register" element={<AuthProtected Component={Register} />} />
+
         <Route path="/register" element={<Register />} />
 
-        <Route path="/" element={<Home {...props} />} />
-        <Route path="/login" element={<Login {...props} />} />
-        <Route path="/register" element={<Register {...props} />} />
-        <Route path="/myaccount" element={<AccountLogin />} />
-        <Route path="*" element={<h1>404 page not found</h1>} />
       </Routes>
     </div>
   );

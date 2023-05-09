@@ -3,6 +3,15 @@
     /* margin-left: -50px !important; */
     color: #ff4d4f;
 }
+.register-form-heading{
+    text-align: "center";
+    margin: "30px 0px";
+    color: orangered;
+}
+.register-form p{
+    color:gray;
+    margin-bottom:20px;
+}
 .register-form-container{
     max-width: 550px;
     margin: auto;
@@ -25,6 +34,34 @@
 .ant-form-item-control {
     flex: 1 1 0;
     max-width: 200px;
+}
+.socialLogin{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.socialLogin .ant-btn {
+    font-size: 14px;
+    height: auto;
+    /* border: 1px solid black; */
+    padding: 5px;
+    border-radius: 6px;
+    border:none
+}
+.socialLogin-item{
+    margin-bottom: 15px !important;
+}
+.loginIcons{
+    font-size: 30px;
+    margin:0px 10px;
+    color: #3b5998;
+}
+.twitterIcons{
+    font-size: 30px;
+    margin:0px 10px;
+    color: #00acee;
+
 }
 @media only screen and (max-width: 1200px) {
     .register-form .ant-input-affix-wrapper {

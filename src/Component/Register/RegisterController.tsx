@@ -1,6 +1,13 @@
 import { Component } from "react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  GoogleAuthProvider,
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+} from "firebase/auth";
 import { Auth } from "../../firebase_setup/firebase";
+import { providerTwitter } from "../../firebase_setup/firebase";
+import { provider } from "../../firebase_setup/firebase";
+import { providerFaceBook } from "../../firebase_setup/firebase";
 interface States {
   name: string;
   email: string;
@@ -21,7 +28,71 @@ export class RegisterController extends Component<Props, States> {
       password: "",
     };
   }
+  handleGoogleRegister = () => {
+    signInWithPopup(Auth, provider)
+      .then(async (result) => {
+        let user = localStorage.getItem("token");
+        if (user) {
+          localStorage.clear();
+          localStorage.setItem("token", JSON.stringify(result.user.uid));
+          this.forceUpdate();
 
+          await this.props.router.navigate("/");
+        } else {
+          localStorage.setItem("token", JSON.stringify(result.user.uid));
+          await this.props.router.navigate("/");
+        }
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        const email = error.customData.email;
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        alert(errorMessage);
+        this.props.router.navigate("/login");
+      });
+  };
+  handleFacebookRegister = () => {
+    signInWithPopup(Auth, providerFaceBook)
+      .then(async (result) => {
+        let user = localStorage.getItem("token");
+        if (user) {
+          localStorage.clear();
+          localStorage.setItem("token", JSON.stringify(result.user.uid));
+          this.forceUpdate();
+
+          await this.props.router.navigate("/");
+        } else {
+          localStorage.setItem("token", JSON.stringify(result.user.uid));
+          await this.props.router.navigate("/");
+        }
+      })
+      .catch((error: any) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        const email = error.customData.email;
+        console.log(error);
+      });
+  };
+  handleTwitterRegister = () => {
+    signInWithPopup(Auth, providerTwitter)
+      .then(async (result: any) => {
+        let user = localStorage.getItem("token");
+        if (user) {
+          localStorage.clear();
+          localStorage.setItem("token", JSON.stringify(result.user.uid));
+          this.forceUpdate();
+
+          await this.props.router.navigate("/");
+        } else {
+          localStorage.setItem("token", JSON.stringify(result.user.uid));
+          await this.props.router.navigate("/");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   onFinish = (values: any) => {
     this.setState(
       {

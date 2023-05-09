@@ -17,6 +17,7 @@ export const Protected = (props: any) => {
   );
 };
 export const AuthProtected = (props: any) => {
+  //component=<Login/>
   let { Component } = props;
   const Navigate = useNavigate();
   useEffect(() => {

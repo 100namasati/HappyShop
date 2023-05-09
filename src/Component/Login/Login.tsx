@@ -2,14 +2,12 @@ import React, { Component } from "react";
 import { Form, Input, Button, Row, Col } from "antd";
 import "./Login.css";
 import LoginController from "./LoginController";
-import {FcGoogle} from 'react-icons/fc';
-import {AiFillTwitterCircle} from 'react-icons/ai'
-import {FaFacebookSquare} from 'react-icons/fa'
-
-=======
+import { FcGoogle } from "react-icons/fc";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { FaFacebookSquare } from "react-icons/fa";
 import { withRouter } from "../../HOC";
 import { Link } from "react-router-dom";
->>>>>>> 5b643a2 (bug fixes in private routes)
+
 export class Login extends LoginController {
   render() {
     return (
@@ -107,13 +105,7 @@ export class Login extends LoginController {
               }}
             >
               <Row style={{ width: "100%" }}>
-                <Col
-                  lg={24}
-                  md={24}
-                  sm={24}
-                  xs={24}
-                  className="loginButton"
-                >
+                <Col lg={24} md={24} sm={24} xs={24} className="loginButton">
                   <Form.Item>
                     <Button htmlType="submit">Login</Button>
                   </Form.Item>
