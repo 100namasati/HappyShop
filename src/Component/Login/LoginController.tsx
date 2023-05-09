@@ -3,7 +3,7 @@ import {
   Auth,
   provider,
   providerFaceBook,
-  providerTwitter
+  providerTwitter,
 } from "../../firebase_setup/firebase";
 import {
   GoogleAuthProvider,
@@ -30,9 +30,17 @@ export class LoginController extends Component<Props, States> {
   handleLogin = () => {
     signInWithPopup(Auth, provider)
       .then(async (result) => {
-        const user = result.user;
-        // console.log(user);
-        await this.props.router.navigate("/");
+        let user = localStorage.getItem("token");
+        if (user) {
+          localStorage.clear();
+          localStorage.setItem("token", JSON.stringify(result.user.uid));
+          this.forceUpdate();
+
+          await this.props.router.navigate("/");
+        } else {
+          localStorage.setItem("token", JSON.stringify(result.user.uid));
+          await this.props.router.navigate("/");
+        }
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -45,9 +53,18 @@ export class LoginController extends Component<Props, States> {
   };
   handleFacebookLogin = () => {
     signInWithPopup(Auth, providerFaceBook)
-      .then((result) => {
-        const user = result.user;
-        const credential = FacebookAuthProvider.credentialFromResult(result);
+      .then(async (result) => {
+        let user = localStorage.getItem("token");
+        if (user) {
+          localStorage.clear();
+          localStorage.setItem("token", JSON.stringify(result.user.uid));
+          this.forceUpdate();
+
+          await this.props.router.navigate("/");
+        } else {
+          localStorage.setItem("token", JSON.stringify(result.user.uid));
+          await this.props.router.navigate("/");
+        }
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -57,32 +74,44 @@ export class LoginController extends Component<Props, States> {
         console.log(error);
       });
   };
-  handleTwitterLogin=()=>{
-    signInWithPopup(Auth,  providerTwitter)
-  .then((result) => {
-    const credential = TwitterAuthProvider.credentialFromResult(result);
-    const user = result.user;
-    
-  }).catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    const email = error.customData.email;
-    const credential = TwitterAuthProvider.credentialFromError(error);
-    console.log(error);
-    
-    // ...
-  });
-  }
+  handleTwitterLogin = () => {
+    signInWithPopup(Auth, providerTwitter)
+      .then(async (result) => {
+        let user = localStorage.getItem("token");
+        if (user) {
+          localStorage.clear();
+          localStorage.setItem("token", JSON.stringify(result.user.uid));
+          this.forceUpdate();
+          await this.props.router.navigate("/");
+        } else {
+          localStorage.setItem("token", JSON.stringify(result.user.uid));
+          await this.props.router.navigate("/");
+        }
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        const email = error.customData.email;
+        const credential = TwitterAuthProvider.credentialFromError(error);
+        console.log(error);
+
+        // ...
+      });
+  };
   onFinish = (values: any) => {
     // console.log("Success:", values);
     this.setState({ email: values.email, password: values.password }, () => {
+<<<<<<< HEAD
       console.log("Success:", this.state.email);
       console.log("Success:", this.state.password);
+=======
+>>>>>>> 09daab3 (login form mofified)
       signInWithEmailAndPassword(Auth, this.state.email, this.state.password)
         .then(async (res) => {
           // console.log("@@@@_______", res.user.uid);
           let user = localStorage.getItem("token");
           if (user) {
+<<<<<<< HEAD
             await localStorage.clear();
             await localStorage.setItem("token", JSON.stringify(res.user.uid));
             await this.forceUpdate();
@@ -95,6 +124,14 @@ export class LoginController extends Component<Props, States> {
             console.log("logged in");
 
             await this.props.router.navigate("/products");
+=======
+            localStorage.clear();
+            localStorage.setItem("token", JSON.stringify(res.user.uid));
+            await this.props.router.navigate("/");
+          } else {
+            localStorage.setItem("token", JSON.stringify(res.user.uid));
+            await this.props.router.navigate("/");
+>>>>>>> 09daab3 (login form mofified)
           }
         })
         .catch((error) => {

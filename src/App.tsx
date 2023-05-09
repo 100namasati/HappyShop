@@ -1,18 +1,15 @@
-import Home from "./Component/Home";
-=======
 import React, { useEffect, useState } from "react";
 import Home from "./Component/Home/Home";
->>>>>>> 5b643a2 (bug fixes in private routes)
 import "./App.css";
 import ProjectNavbar from "./Component/Navbar/ProjectNavbar";
 import { Route, Routes } from "react-router-dom";
 import Register from "./Component/Register/Register";
 import Login from "./Component/Login/Login";
 import { withRouter } from "./HOC";
-<<<<<<< HEAD
+
 import { Protected, AuthProtected } from "./Component/Protected/Protected";
 import Products from "./Component/Products/Products";
-=======
+
 import AccountLogin from "./Component/MyAccount/AccountLogin";
 function App(props: any) {
   return (
@@ -21,9 +18,15 @@ function App(props: any) {
       <Routes>
         <Route path="/" element={<Protected Component={Home} />} />
         <Route path="/myaccount" element={<AccountLogin />} />
+
         <Route path="/Products" element={<Protected Component={Products} />} />
+
         <Route path="/login" element={<AuthProtected Component={Login} />} />
+
         <Route path="/register" element={<AuthProtected Component={Register} />} />
+
+        <Route path="/register" element={<Register />} />
+
       </Routes>
     </div>
   );

@@ -62,14 +62,18 @@
 }
 .loginIcons{
     font-size: 30px;
-    margin-right: 10px;
+    margin:0px 10px;
     color: #3b5998;
 }
 .twitterIcons{
     font-size: 30px;
-    margin-right: 10px;
+    margin:0px 10px;
     color: #00acee;
 
+}
+.socialLogin-item{
+    margin: 0px !important;
+    height: 50px !important;
 }
 .social-section h6{
    align-items: center;

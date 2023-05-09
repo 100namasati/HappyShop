@@ -2,6 +2,10 @@ import { Form, Input, Button, Row, Col } from "antd";
 import "./Register.css";
 import RegisterController from "./RegisterController";
 import { withRouter } from "../../HOC";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebookSquare } from "react-icons/fa";
+import { Link } from "react-router-dom";
 class Register extends RegisterController {
   dateFormatList = ["DD/MM/YYYY", "DD/MM/YY"];
 
@@ -14,13 +18,14 @@ class Register extends RegisterController {
       <div className="register-form">
         <h1
           style={{
-            textAlign: "center",
-            margin: "50px 0px",
-            color: "orangered",
+           
           }}
+          className="register-form-heading"
         >
-          User Registration
+          Register
         </h1>
+        <p>Please register your with account detail below.</p>
+
         <Form
           name="basic"
           labelCol={{
@@ -180,15 +185,43 @@ class Register extends RegisterController {
                 alignItems: "center",
               }}
             >
-              <Form.Item>
-                <Button
-                  type="primary"
-                  style={{ width: "200px" }}
-                  htmlType="submit"
-                >
-                  Register
-                </Button>
-              </Form.Item>
+              <Row style={{ width: "100%" }}>
+                <Col lg={24} md={24} sm={24} xs={24} className="loginButton">
+                  <Form.Item>
+                    <Button htmlType="submit">Register</Button>
+                  </Form.Item>
+                </Col>
+                <Col lg={24} md={24} sm={24} className="social-section">
+                  <hr />
+                  <h6>Or sign Up with</h6>
+                </Col>
+                <Col lg={24} md={24} sm={24} className="socialLogin">
+                  <Form.Item className="socialLogin-item">
+                    <Button onClick={this.handleGoogleRegister}>
+                      <span className="loginIcons">
+                        <FcGoogle />
+                      </span>
+                    </Button>
+                  </Form.Item>
+                  <Form.Item className="socialLogin-item">
+                    <Button onClick={this.handleTwitterRegister}>
+                      <span className="twitterIcons">
+                        <AiFillTwitterCircle />
+                      </span>
+                    </Button>
+                  </Form.Item>
+                  <Form.Item className="socialLogin-item">
+                    <Button onClick={this.handleFacebookRegister}>
+                      <span className="loginIcons">
+                        <FaFacebookSquare />
+                      </span>
+                    </Button>
+                  </Form.Item>
+                </Col>
+                <Col lg={24} md={24} sm={24} className="register-section">
+                  <Link to="/login">Sign In</Link>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Form>
