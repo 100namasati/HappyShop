@@ -24,6 +24,7 @@ const app = initializeApp(firebaseConfig);
 const providerFaceBook = new FacebookAuthProvider();
 const provider = new GoogleAuthProvider();
 const providerTwitter = new TwitterAuthProvider();
+
 const Auth = getAuth(app);
 
-export { Auth, provider, providerFaceBook, providerTwitter };
+export { Auth, provider, providerFaceBook ,providerTwitter};

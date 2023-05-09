@@ -1,3 +1,9 @@
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .login-form .ant-form-item .ant-form-item-explain-error {
     width: 300px !important;
     /* margin-left: -50px !important; */
@@ -14,8 +20,66 @@
     width: 480px !important;
 
 }
+.login-form p{
+    color:gray;
+    margin-bottom:40px;
+}
 .login-form .ant-select.ant-select-in-form-item {
     width: 480px !important;
+}
+.loginButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginButton .ant-btn {
+    font-size: 18px;
+    background-color: coral;
+    height: auto;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 6px;
+    /* border:none */
+}
+.loginButton .ant-btn:hover {
+    color:white;
+    border: 1px solid white;
+    /* border:none */
+}
+.socialLogin{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.socialLogin .ant-btn {
+    font-size: 14px;
+    height: auto;
+    /* border: 1px solid black; */
+    padding: 5px;
+    border-radius: 6px;
+    border:none
+}
+.loginIcons{
+    font-size: 30px;
+    margin-right: 10px;
+    color: #3b5998;
+}
+.twitterIcons{
+    font-size: 30px;
+    margin-right: 10px;
+    color: #00acee;
+
+}
+.social-section h6{
+   align-items: center;
+}
+.register-section{
+    margin-top: 20px;
+}
+.register-section h6{
+    align-items: center;
+    color: coral;
 }
 @media only screen and (max-width: 1200px) {
     .login-form .ant-input-affix-wrapper {
