@@ -5,7 +5,6 @@ import { Route, Routes } from "react-router-dom";
 import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
 import { withRouter } from "./HOC";
-
 import { Protected, AuthProtected } from "./Components/Protected/Protected";
 import Products from "./Components/Products/Products";
 
@@ -27,7 +26,6 @@ function App(props: any) {
         <Route path="/services" element={<Protected Component={Services} />} />
 
         <Route path="/login" element={<AuthProtected Component={Login} />} />
-
         <Route path="/register" element={<Register />} />
       </Routes>
     </div>
