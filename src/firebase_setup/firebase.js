@@ -23,6 +23,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const providerFaceBook = new FacebookAuthProvider();
 const provider = new GoogleAuthProvider();
+
 const providerTwitter = new TwitterAuthProvider();
 
 const Auth = getAuth(app);

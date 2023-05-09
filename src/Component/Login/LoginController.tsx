@@ -3,7 +3,7 @@ import {
   Auth,
   provider,
   providerFaceBook,
-  providerTwitter
+  providerTwitter,
 } from "../../firebase_setup/firebase";
 import {
   GoogleAuthProvider,
@@ -58,21 +58,24 @@ export class LoginController extends Component<Props, States> {
       });
   };
   handleTwitterLogin=()=>{
-    signInWithPopup(Auth,  providerTwitter)
+    signInWithPopup(Auth, providerTwitter)
   .then((result) => {
     const credential = TwitterAuthProvider.credentialFromResult(result);
     const user = result.user;
-    
+    console.log(user);
   }).catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
-    const email = error.customData.email;
     const credential = TwitterAuthProvider.credentialFromError(error);
-    console.log(error);
-    
-    // ...
+    console.log("@@@@=====@@@@", credential)
+    console.log("@@@@====",errorMessage);
   });
   }
+  // handleTwitterLogin = async () => {
+  //   await signInWithPopup(Auth, providerTwitter)
+  //     .then((response) => console.log(response))
+  //     .catch((error) => console.log(error))
+  // };
   onFinish = (values: any) => {
     // console.log("Success:", values);
     this.setState({ email: values.email, password: values.password }, () => {
