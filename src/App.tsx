@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
 import Home from "./Component/Home";
+=======
+import React, { useEffect, useState } from "react";
+import Home from "./Component/Home/Home";
+>>>>>>> 5b643a2 (bug fixes in private routes)
 import "./App.css";
 import ProjectNavbar from "./Component/Navbar/ProjectNavbar";
 import { Route, Routes } from "react-router-dom";
@@ -17,11 +19,11 @@ function App(props: any) {
     <div className="App">
       <ProjectNavbar router={undefined} />
       <Routes>
-        <Route path="/" element={<Home {...props} />} />
-        <Route path="/login" element={<Login {...props} />} />
-        <Route path="/register" element={<Register {...props} />} />
-        <Route path="/myaccount" element={<AccountLogin/>}/>
-        <Route path="*" element={<h1>404 page not found</h1>} />
+        <Route path="/" element={<Protected Component={Home} />} />
+        <Route path="/myaccount" element={<AccountLogin />} />
+        <Route path="/Products" element={<Protected Component={Products} />} />
+        <Route path="/login" element={<AuthProtected Component={Login} />} />
+        <Route path="/register" element={<AuthProtected Component={Register} />} />
       </Routes>
     </div>
   );
