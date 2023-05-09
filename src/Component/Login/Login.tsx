@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Form, Input, Button, Row, Col } from "antd";
 import "./Login.css";
 import LoginController from "./LoginController";
-
+import { withRouter } from "../../HOC";
+import { Link } from "react-router-dom";
 export class Login extends LoginController {
   render() {
     return (
@@ -100,7 +101,7 @@ export class Login extends LoginController {
             >
               <Row style={{ width: "100%" }}>
                 <Col lg={12} md={12} sm={12} xs={12}>
-                  <h6>Create new account</h6>
+                  <Link to={"/register"}>Create new account</Link>
                 </Col>
                 <Col
                   lg={12}
@@ -146,4 +147,4 @@ export class Login extends LoginController {
   }
 }
 
-export default Login;
+export default withRouter(Login);

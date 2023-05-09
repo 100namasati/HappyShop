@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../Images/logo.png";
+import logo from "../../Images/logo.png";
 import {
   FaFacebookF,
   FaTwitter,
@@ -14,20 +14,19 @@ export default class Footer extends Component {
     return (
       <div>
         <div className="marque_parent">
-         
-        <div className="marquee">
-          <div>
-            <p>Gift</p>
-            <p>New Arrival</p>
-            <p>Accessories</p>
-            <p>Hand Craft</p>
-            <p>Home Decor</p>
-            <p>Interior Design</p>
-            <p>Secure Checkout</p>
-            <p>HandCraft</p>
-            <p>Money Back Gaurantee</p>
+          <div className="marquee">
+            <div>
+              <p>Gift</p>
+              <p>New Arrival</p>
+              <p>Accessories</p>
+              <p>Hand Craft</p>
+              <p>Home Decor</p>
+              <p>Interior Design</p>
+              <p>Secure Checkout</p>
+              <p>HandCraft</p>
+              <p>Money Back Gaurantee</p>
+            </div>
           </div>
-        </div>
         </div>
         <div className="footer-Container">
           <div className="footerTop">

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Row, Col } from "antd";
-import Kattle from "../Images/katt.png";
-import Bowl from "../Images/Bowl.png";
+import Kattle from "../../Images/katt.png";
+import Bowl from "../../Images/Bowl.png";
 import { MdLocalShipping } from "react-icons/md";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { RiSecurePaymentLine } from "react-icons/ri";

@@ -17,7 +17,6 @@ export interface states {
   closeDrawer: boolean;
   //user menu state
   openMenu: boolean;
-  isTokenAvailable: boolean;
 }
 
 export type Props = {
@@ -32,28 +31,18 @@ export default class first extends React.Component<Props, states> {
       closeDrawer: false,
       //user menu state
       openMenu: false,
-      //token
-      isTokenAvailable: false,
     };
   }
-  componentDidMount(): void {
-    let user: any = localStorage.getItem("token");
-    if (user === null) {
-      return this.setState({ isTokenAvailable: false });
-    } else if (user !== "") {
-      return this.setState({ isTokenAvailable: true });
+  Protected = () => {
+    let isLoggedIn = false;
+    let user = localStorage.getItem("token");
+    if (!user) {
+      isLoggedIn = false;
+    } else {
+      isLoggedIn = true;
     }
-    // if (user !== "") {
-    //   this.setState({ isTokenAvailable: true }, () => {
-    //     console.log("@@@@@----", this.state.isTokenAvailable);
-    //   });
-    // } else {
-    //   this.setState({ isTokenAvailable: false }, () => {
-    //     console.log("######-----", this.state.isTokenAvailable);
-    //   });
-    // }
-    // console.log(this.state.isTokenAvailable);
-  }
+    return isLoggedIn;
+  };
   openDrawer = () => {
     this.setState({ drawer: true });
   };
@@ -68,7 +57,6 @@ export default class first extends React.Component<Props, states> {
     signOut(auth)
       .then(() => {
         localStorage.clear();
-        this.setState({ isTokenAvailable: false });
         this.props.router.navigate("/login");
       })
       .catch((error) => {

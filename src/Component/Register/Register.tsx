@@ -1,7 +1,8 @@
 import { Form, Input, Button, Row, Col } from "antd";
 import "./Register.css";
 import RegisterController from "./RegisterController";
-export class Register extends RegisterController {
+import { withRouter } from "../../HOC";
+class Register extends RegisterController {
   dateFormatList = ["DD/MM/YYYY", "DD/MM/YY"];
 
   // onChangeDatePicker = (date: any, dateString: any) => {
@@ -196,4 +197,4 @@ export class Register extends RegisterController {
   }
 }
 
-export default Register;
+export default withRouter(Register);
