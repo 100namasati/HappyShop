@@ -15,6 +15,7 @@ import {
 interface States {
   email: string;
   password: string;
+  loading: boolean;
 }
 type Props = {
   router: any;
@@ -25,6 +26,7 @@ export class LoginController extends Component<Props, States> {
     this.state = {
       email: "",
       password: "",
+      loading: false,
     };
   }
   handleLogin = () => {
@@ -100,6 +102,7 @@ export class LoginController extends Component<Props, States> {
   };
   onFinish = (values: any) => {
     // console.log("Success:", values);
+    this.setState({ loading: true });
     this.setState({ email: values.email, password: values.password }, () => {
 <<<<<<< HEAD
       console.log("Success:", this.state.email);
@@ -108,6 +111,7 @@ export class LoginController extends Component<Props, States> {
 >>>>>>> 09daab3 (login form mofified)
       signInWithEmailAndPassword(Auth, this.state.email, this.state.password)
         .then(async (res) => {
+          this.setState({ loading: true });
           // console.log("@@@@_______", res.user.uid);
           let user = localStorage.getItem("token");
           if (user) {
@@ -133,6 +137,7 @@ export class LoginController extends Component<Props, States> {
             await this.props.router.navigate("/");
 >>>>>>> 09daab3 (login form mofified)
           }
+          this.setState({ loading: false });
         })
         .catch((error) => {
           const errorCode = error.code;
