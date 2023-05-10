@@ -1,4 +1,5 @@
 import { Component } from "react";
+
 import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
@@ -8,11 +9,16 @@ import { Auth } from "../../firebase_setup/firebase";
 import { providerTwitter } from "../../firebase_setup/firebase";
 import { provider } from "../../firebase_setup/firebase";
 import { providerFaceBook } from "../../firebase_setup/firebase";
+import React from "react";
 interface States {
   name: string;
   email: string;
   phone: string;
   password: string;
+  showotpbtn: boolean;
+  otpArray: Array<string>;
+  otp: string;
+  otpVerified: boolean;
 }
 type Props = {
   router: any;
@@ -20,14 +26,20 @@ type Props = {
 export class RegisterController extends Component<Props, States> {
   constructor(props: Props) {
     super(props);
+   
     this.state = {
       //form state
       name: "",
       email: "",
       phone: "",
       password: "",
+      showotpbtn: false,
+      otpArray: [],
+      otp: "",
+      otpVerified: false,
     };
   }
+ 
   handleGoogleRegister = () => {
     signInWithPopup(Auth, provider)
       .then(async (result) => {
@@ -119,7 +131,7 @@ export class RegisterController extends Component<Props, States> {
           .catch(async (err) => {
             console.log(err.message);
             alert(err.message);
-            await this.props.router.navigate("/login");
+            await this.props.router.navigate("/register");
           });
       }
     );
@@ -127,6 +139,33 @@ export class RegisterController extends Component<Props, States> {
   onFinishFailed = (errorInfo: any) => {
     console.log("Failed:", errorInfo);
   };
+  sendOtp = () => {
+    var digits = "0123456789";
+    let OTP = "";
+    for (let i = 0; i < 6; i++) {
+      OTP += digits[Math.floor(Math.random() * 10)];
+    }
+    console.log(OTP);
+    this.state.otpArray.push(OTP);
+    console.log(this.state.otpArray);
+    this.setState({ showotpbtn: true });
+  };
+  verifyOtp = () => {
+    let verifyStatus = this.state.otpArray.includes(this.state.otp);
+    if (verifyStatus) {
+      this.setState({ otpVerified: true }, () => {
+        alert("Your mobile number is verfied");
+      });
+    } else {
+      this.setState({ otpVerified: false });
+      alert("Invalid Otp");
+    }
+  };
+  render() {
+    return (
+      <div>RegisterController</div>
+    )
+  }
 }
 
 export default RegisterController;

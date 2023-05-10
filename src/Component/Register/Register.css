@@ -13,14 +13,14 @@
     margin-bottom:20px;
 }
 .register-form-container{
-    max-width: 550px;
+    max-width: 1000px;
     margin: auto;
 }
 .register-form .ant-input-affix-wrapper {
-    width: 480px !important;
+    width: 390px !important;
 }
 .register-form  .ant-picker{
-    width: 480px !important;
+    width: 390px !important;
 
 }
 .register-form .ant-select.ant-select-in-form-item {
@@ -63,9 +63,9 @@
     color: #00acee;
 
 }
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
     .register-form .ant-input-affix-wrapper {
-        width: 450px !important;
+        width: 380px !important;
     }
     .register-form  .ant-picker{
         width: 450px !important;
@@ -73,25 +73,31 @@
     }
     .register-form .ant-select.ant-select-in-form-item {
         width: 450px !important;
+    }
+    .register-phone-otp-field{
+        width:380px;
     }
 
 }
-@media only screen and (max-width: 992px) {
+@media (max-width: 991px) {
     .register-form .ant-input-affix-wrapper {
-        width: 340px !important;
+        width: 300px !important;
     }
     .register-form  .ant-picker{
         width: 340px !important;
     
     }
     .register-form .ant-select.ant-select-in-form-item {
-        width: 340px !important;
+        width: 300px !important;
+    }
+    .register-phone-otp-field{
+        width: 300px;
     }
   }
  
-@media only screen and (max-width: 768px) {
+@media (max-width: 767px) {
     .register-form .ant-input-affix-wrapper {
-        width: 455px !important;
+        width: 445px !important;
     }
     .register-form  .ant-picker{
         width: 455px !important;
@@ -100,8 +106,11 @@
     .register-form .ant-select.ant-select-in-form-item {
         width: 455px !important;
     }
+    .register-phone-otp-field{
+        width: 445px;
+    }
   }
-@media only screen and (max-width: 576px) {
+@media (max-width: 576px) {
     .register-form .ant-input-affix-wrapper {
         width: 455px !important;
     }

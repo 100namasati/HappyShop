@@ -1,4 +1,4 @@
-import { Form, Input, Button, Row, Col } from "antd";
+import { Form, Input, Button, Row, Col, Space } from "antd";
 import "./Register.css";
 import RegisterController from "./RegisterController";
 import { withRouter } from "../../HOC";
@@ -9,19 +9,10 @@ import { Link } from "react-router-dom";
 class Register extends RegisterController {
   dateFormatList = ["DD/MM/YYYY", "DD/MM/YY"];
 
-  // onChangeDatePicker = (date: any, dateString: any) => {
-  //   this.setState({ DOB: dateString });
-  // };
-
   render() {
     return (
       <div className="register-form">
-        <h1
-          style={{
-           
-          }}
-          className="register-form-heading"
-        >
+        <h1 style={{}} className="register-form-heading">
           Register
         </h1>
         <p>Please register your with account detail below.</p>
@@ -33,7 +24,7 @@ class Register extends RegisterController {
           }}
           wrapperCol={
             {
-              // span: 12,
+              // span: 8,
             }
           }
           className="register-form-container"
@@ -44,7 +35,7 @@ class Register extends RegisterController {
           labelAlign="left"
         >
           <Row>
-            <Col lg={24} md={24} sm={24} xs={24}>
+            <Col lg={12} md={12} sm={24} xs={24}>
               <Form.Item
                 label="Name"
                 name="name"
@@ -60,10 +51,10 @@ class Register extends RegisterController {
                 ]}
                 hasFeedback
               >
-                <Input style={{ width: 500 }} placeholder="Enter your name" />
+                <Input placeholder="Enter your name" />
               </Form.Item>
             </Col>
-            <Col lg={24} md={24} sm={24} xs={24}>
+            <Col lg={12} md={12} sm={24} xs={24}>
               <Form.Item
                 label={<label>Email</label>}
                 name="email"
@@ -87,8 +78,7 @@ class Register extends RegisterController {
                 />
               </Form.Item>
             </Col>
-
-            <Col lg={24} md={24} sm={24} xs={24}>
+            <Col lg={12} md={12} sm={24} xs={24}>
               <Form.Item
                 label={<label>Phone</label>}
                 name="phone"
@@ -104,15 +94,56 @@ class Register extends RegisterController {
                 ]}
                 hasFeedback
               >
-                <Input
-                  style={{ width: 500 }}
-                  type="number"
-                  placeholder="Please enter your phone number"
-                />
+                <Space.Compact className="register-phone-otp-field">
+                  <Input
+                    // style={{ width: 500 }}
+                    type="number"
+                    placeholder="Please enter your phone number"
+                    onChange={(e) => this.setState({ phone: e.target.value })}
+                  />
+
+                  <Button
+                    type="primary"
+                    onClick={this.sendOtp}
+                    disabled={this.state.phone.length === 10 ? false : true}
+                  >
+                    Send Otp
+                  </Button>
+                </Space.Compact>
               </Form.Item>
             </Col>
+            <Col lg={12} md={12} sm={24} xs={24}>
+              <Form.Item
+                label={<label>Otp</label>}
+                name="Otp"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please enter otp ",
+                  },
+                ]}
+                hasFeedback
+              >
+                <Space.Compact className="register-phone-otp-field">
+                  <Input
+                    // style={{ width: 500 }}
+                    type="number"
+                    placeholder="Please enter your phone number"
+                    onChange={(e) => this.setState({ otp: e.target.value })}
+                    disabled={this.state.showotpbtn ? false : true}
+                  />
 
-            <Col lg={24} md={24} sm={24} xs={24}>
+                  <Button
+                    type="primary"
+                    onClick={() => this.verifyOtp()}
+                    disabled={this.state.otp.length === 6 ? false : true}
+                  >
+                    Verify otp
+                  </Button>
+                </Space.Compact>
+              </Form.Item>
+            </Col>
+            <Col lg={12} md={12} sm={24} xs={24}>
               <Form.Item
                 label={<label>Password</label>}
                 name="password"
@@ -145,8 +176,7 @@ class Register extends RegisterController {
                 />
               </Form.Item>
             </Col>
-
-            <Col lg={24} md={24} sm={24} xs={24}>
+            <Col lg={12} md={12} sm={24} xs={24}>
               <Form.Item
                 label={<label>Confrim</label>}
                 name="confirm_password"
@@ -172,8 +202,8 @@ class Register extends RegisterController {
                   placeholder="Enter confirm password"
                 />
               </Form.Item>
-            </Col>
-
+            </Col>{" "}
+            *
             <Col
               lg={24}
               md={24}
@@ -188,7 +218,12 @@ class Register extends RegisterController {
               <Row style={{ width: "100%" }}>
                 <Col lg={24} md={24} sm={24} xs={24} className="loginButton">
                   <Form.Item>
-                    <Button htmlType="submit">Register</Button>
+                    <Button
+                      disabled={this.state.otpVerified ? false : true}
+                      htmlType="submit"
+                    >
+                      Register
+                    </Button>
                   </Form.Item>
                 </Col>
                 <Col lg={24} md={24} sm={24} className="social-section">
