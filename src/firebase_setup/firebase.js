@@ -2,7 +2,6 @@
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
 import {
   getAuth,
   GoogleAuthProvider,
@@ -25,7 +24,6 @@ const app = initializeApp(firebaseConfig);
 const providerFaceBook = new FacebookAuthProvider();
 const provider = new GoogleAuthProvider();
 const providerTwitter = new TwitterAuthProvider();
-
 const Auth = getAuth(app);
 
-export { Auth, provider, providerFaceBook ,providerTwitter};
+export { Auth, provider, providerFaceBook, providerTwitter };

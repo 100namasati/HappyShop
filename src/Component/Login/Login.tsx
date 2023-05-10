@@ -70,37 +70,6 @@ export class Login extends LoginController {
                     />
                   </Form.Item>
                 </Col>
-<<<<<<< HEAD
-                <Col lg={24} md={24} sm={24} className="social-section">
-                  <hr />
-                  <h6>Or sign Up with</h6>
-                </Col>
-                <Col lg={24} md={24} sm={24} className="socialLogin">
-                  <Form.Item>
-                    <Button onClick={this.handleLogin}>
-                      <span className="loginIcons">
-                        <FcGoogle />
-                      </span>
-                    </Button>
-                  </Form.Item>
-                  <Form.Item>
-                    <Button onClick={this.handleTwitterLogin}>
-                      <span className="twitterIcons">
-                        <AiFillTwitterCircle />
-                      </span>
-                    </Button>
-                  </Form.Item>
-                  <Form.Item>
-                    <Button onClick={this.handleFacebookLogin}>
-                      <span className="loginIcons">
-                        <FaFacebookSquare />
-                      </span>
-                    </Button>
-                  </Form.Item>
-                </Col>
-                <Col lg={24} md={24} sm={24} className="register-section">
-                  <h6>Sign Up</h6>
-=======
 
                 <Col lg={24} md={24} sm={24} xs={24}>
                   <Form.Item
@@ -190,7 +159,6 @@ export class Login extends LoginController {
                       <Link to="/register">Sign Up</Link>
                     </Col>
                   </Row>
->>>>>>> be714eb (some modification in login)
                 </Col>
               </Row>
             </Form>

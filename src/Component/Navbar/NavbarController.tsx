@@ -23,8 +23,12 @@ export type Props = {
   router: any;
 };
 export default class first extends React.Component<Props, states> {
+  componentRef: React.RefObject<HTMLDivElement>;
+
   constructor(props: Props) {
     super(props);
+    this.componentRef = React.createRef();
+    this.handleCloseUserMenu = this.handleCloseUserMenu.bind(this);
     this.state = {
       drawer: false,
       drawerDirection: "left",
@@ -33,23 +37,23 @@ export default class first extends React.Component<Props, states> {
       openMenu: false,
     };
   }
-  componentDidMount(): void {
-    let user: any = localStorage.getItem("token");
-    if (user === null) {
-      return this.setState({ isTokenAvailable: false });
-    } else if (user !== "") {
-      return this.setState({ isTokenAvailable: true });
+  componentDidMount() {
+    document.addEventListener("mousedown", this.handleCloseUserMenu);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleCloseUserMenu);
+  }
+
+  handleCloseUserMenu(event: MouseEvent) {
+    if (
+      this.componentRef.current &&
+      !this.componentRef.current.contains(event.target as Node)
+    ) {
+      this.setState({
+        openMenu: false,
+      });
     }
-    // if (user !== "") {
-    //   this.setState({ isTokenAvailable: true }, () => {
-    //     console.log("@@@@@----", this.state.isTokenAvailable);
-    //   });
-    // } else {
-    //   this.setState({ isTokenAvailable: false }, () => {
-    //     console.log("######-----", this.state.isTokenAvailable);
-    //   });
-    // }
-    // console.log(this.state.isTokenAvailable);
   }
   openDrawer = () => {
     this.setState({ drawer: true });

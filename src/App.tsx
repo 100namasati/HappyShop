@@ -21,10 +21,7 @@ function App(props: any) {
 
         <Route path="/login" element={<AuthProtected Component={Login} />} />
 
-        <Route path="/register" element={<AuthProtected Component={Register} />} />
-
         <Route path="/register" element={<Register />} />
-
       </Routes>
     </div>
   );
