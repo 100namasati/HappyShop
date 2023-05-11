@@ -28,10 +28,8 @@ function App(props: any) {
 
 
         <Route path="/Products" element={<Protected Component={Products} />} />
-
-        <Route path="/login" element={<AuthProtected Component={Login} />} />
-
         <Route path="/myaccount" element={<AuthProtected Component={AccountLogin} />} />
+        <Route path="/login" element={<AuthProtected Component={Login} />} /> 
         <Route path="/register" element={<Register />} />
       </Routes>
     </div>
