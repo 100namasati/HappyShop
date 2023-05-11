@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import Home from "./Component/Home/Home";
+import Home from "./Components/Home/Home";
 import "./App.css";
-import ProjectNavbar from "./Component/Navbar/ProjectNavbar";
+import ProjectNavbar from "./Components/Navbar/ProjectNavbar";
 import { Route, Routes } from "react-router-dom";
-import Register from "./Component/Register/Register";
-import Login from "./Component/Login/Login";
+import Register from "./Components/Register/Register";
+import Login from "./Components/Login/Login";
 import { withRouter } from "./HOC";
 
-import { Protected, AuthProtected } from "./Component/Protected/Protected";
-import Products from "./Component/Products/Products";
+import { Protected, AuthProtected } from "./Components/Protected/Protected";
+import Products from "./Components/Products/Products";
 
-import AccountLogin from "./Component/MyAccount/AccountLogin";
+import AccountLogin from "./Components/MyAccount/AccountLogin";
 function App(props: any) {
   return (
     <div className="App">
