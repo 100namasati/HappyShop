@@ -20,6 +20,7 @@ interface States {
   otp: string;
   otpVerified: boolean;
   register: boolean;
+  loading: boolean;
 }
 type Props = {
   router: any;
@@ -39,6 +40,7 @@ export class RegisterController extends Component<Props, States> {
       otp: "",
       otpVerified: false,
       register: false,
+      loading: false,
     };
   }
 
@@ -108,7 +110,7 @@ export class RegisterController extends Component<Props, States> {
       });
   };
   onFinish = (values: any) => {
-    this.setState({ register: true });
+    this.setState({ loading: true });
     this.setState(
       {
         name: values.name,
@@ -128,16 +130,17 @@ export class RegisterController extends Component<Props, States> {
           this.state.password
         )
           .then((res) => {
-            // console.log("@@@@_______", res.user.uid);
+            this.setState({ loading: true });
+            this.setState({ loading: true });
             localStorage.setItem("token", JSON.stringify(res.user.uid));
             this.props.router.navigate("/");
+            this.setState({ loading: false });
           })
           .catch(async (err) => {
             console.log(err.message);
             alert(err.message);
             await this.props.router.navigate("/register");
           });
-        this.setState({ register: false });
       }
     );
   };
