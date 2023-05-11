@@ -1,4 +1,3 @@
-import logo from "../../Images/logo.png";
 import { FiPhoneCall } from "react-icons/fi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaUser, FaBars } from "react-icons/fa";

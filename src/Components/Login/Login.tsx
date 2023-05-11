@@ -93,11 +93,11 @@ export class Login extends LoginController {
                     <Input.Password
                       style={{ width: 500 }}
                       placeholder="Enter password"
-                      onPaste={(e) => {
+                      onPaste={(e: any) => {
                         e.preventDefault();
                         return false;
                       }}
-                      onCopy={(e) => {
+                      onCopy={(e: any) => {
                         e.preventDefault();
                         return false;
                       }}
