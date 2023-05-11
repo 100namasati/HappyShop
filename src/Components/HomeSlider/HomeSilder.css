@@ -1,0 +1,136 @@
+.carousel-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(242, 246, 247);
+  width: 100%;
+  height: auto;
+}
+.left-carousel-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 40%;
+  flex-direction: column;
+}
+.left-carousel-content h4 {
+  color: coral;
+  animation: slide-up 3s;
+}
+@keyframes slide-up {
+  from {
+    opacity: 0.2;
+    margin-top: 150px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 20px;
+  }
+}
+.left-carousel-content h2 {
+  animation: slide-up2 5s;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: left;
+}
+@keyframes slide-up2 {
+  from {
+    opacity: 0.2;
+    margin-top: 100px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 15px;
+  }
+}
+.left-carousel-content p {
+  text-align: left;
+  animation: slide-up3 8s;
+}
+@keyframes slide-up3 {
+  from {
+    opacity: 0.2;
+    margin-top: 75px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 10px;
+  }
+}
+.left-carousel-content button {
+  padding: 20px;
+  background-color: coral;
+  animation: slide-up4 10s;
+  width: 150px;
+  border: none;
+  box-shadow: none;
+}
+@keyframes slide-up4 {
+  from {
+    opacity: 0.2;
+    margin-top: 50px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 5x;
+  }
+}
+.right-carousel-image {
+  width: 40%;
+}
+.right-carousel-image img {
+  width: 500px;
+  height: 500px;
+}
+.swiper-button-prev:after {
+  background-color: coral;
+  color: black;
+  height: 60px;
+  width: 500px;
+  padding: 10px;
+}
+.swiper-button-next:after {
+  background-color: coral;
+  color: black;
+  height: 60px;
+  width: 500px;
+  padding: 10px;
+}
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 40px;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  height: 15px;
+  width: 15px;
+}
+.swiper-pagination-bullet-active {
+  background: coral;
+}
+@media screen and (max-width: 991px) {
+  .carousel-content {
+    flex-direction: column;
+    padding-top: 100px;
+  }
+  .left-carousel-content {
+    width: 70%;
+  }
+  .left-carousel-content h2 {
+    font-size: 30px;
+  }
+  .left-carousel-content button {
+    padding: 10px;
+    background-color: coral;
+    animation: slide-up4 10s;
+    width: 120px;
+  }
+  .right-carousel-image {
+    width: 100%;
+  }
+  .right-carousel-image img {
+    width: 300px;
+    height: 300px;
+  }
+}
