@@ -1,0 +1,69 @@
+.register-form .ant-form-item .ant-form-item-explain-error {
+    width: 300px !important;
+    /* margin-left: -50px !important; */
+    color: #ff4d4f;
+}
+.register-form-container{
+    max-width: 1250px;
+    margin: auto;
+}
+.register-form .ant-input-affix-wrapper {
+    width: 480px !important;
+}
+.register-form  .ant-picker{
+    width: 480px !important;
+
+}
+.register-form .ant-select.ant-select-in-form-item {
+    width: 480px !important;
+}
+@media only screen and (max-width: 1200px) {
+    .register-form .ant-input-affix-wrapper {
+        width: 450px !important;
+    }
+    .register-form  .ant-picker{
+        width: 450px !important;
+    
+    }
+    .register-form .ant-select.ant-select-in-form-item {
+        width: 450px !important;
+    }
+
+}
+@media only screen and (max-width: 992px) {
+    .register-form .ant-input-affix-wrapper {
+        width: 340px !important;
+    }
+    .register-form  .ant-picker{
+        width: 340px !important;
+    
+    }
+    .register-form .ant-select.ant-select-in-form-item {
+        width: 340px !important;
+    }
+  }
+ 
+@media only screen and (max-width: 768px) {
+    .register-form .ant-input-affix-wrapper {
+        width: 455px !important;
+    }
+    .register-form  .ant-picker{
+        width: 455px !important;
+    
+    }
+    .register-form .ant-select.ant-select-in-form-item {
+        width: 455px !important;
+    }
+  }
+@media only screen and (max-width: 576px) {
+    .register-form .ant-input-affix-wrapper {
+        width: 455px !important;
+    }
+    .register-form  .ant-picker{
+        width: 455px !important;
+    
+    }
+    .register-form .ant-select.ant-select-in-form-item {
+        width: 455px !important;
+    }
+  }
