@@ -17,12 +17,8 @@ function App(props: any) {
         <Route path="/" element={<Protected Component={Home} />} />
         <Route path="/myaccount" element={<AccountLogin />} />
         <Route path="/Products" element={<Protected Component={Products} />} />
-<<<<<<< HEAD
-        <Route path="/login" element={<AuthProtected Component={Login} />} />
-=======
         <Route path="/myaccount" element={<AuthProtected Component={AccountLogin} />} />
         <Route path="/login" element={<AuthProtected Component={Login} />} /> 
->>>>>>> 98281ab (Added Product Screen and Create Social Login)
         <Route path="/register" element={<Register />} />
       </Routes>
     </div>
