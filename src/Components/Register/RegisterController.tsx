@@ -138,6 +138,8 @@ export class RegisterController extends Component<Props, States> {
           .catch(async (err) => {
             console.log(err.message);
             alert(err.message);
+            this.setState({ loading: false });
+
             await this.props.router.navigate("/register");
           });
       }

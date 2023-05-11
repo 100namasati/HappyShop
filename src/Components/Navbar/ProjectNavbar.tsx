@@ -40,7 +40,7 @@ class ProjectNavbar extends NavbarController {
             />
           </div>
           <div className="navbar-features">
-            <div className="navbar-features-usericon-container">
+            <div  className="navbar-features-usericon-container">
               <FaUser
                 className="user-profile-icon"
                 onClick={this.openUserMenu}
