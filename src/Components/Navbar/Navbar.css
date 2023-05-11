@@ -58,11 +58,6 @@
   width: 20%;
 }
 
-<<<<<<< HEAD:src/Components/Navbar/Navbar.css
-
-
-.navbar-features .user-menu{
-=======
 .navbar-features .user-profile-icon:hover + .user-menu {
   display: block ;
   /* color: red; */
@@ -71,7 +66,6 @@
 
 .navbar-features .user-menu{
   display: none;
->>>>>>> origin:src/Component/Navbar.css
 position: absolute;
 background-color: white;
 width: 130px;
