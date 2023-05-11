@@ -20,12 +20,18 @@ function App(props: any) {
         <Route path="/" element={<Protected Component={Home} />} />
         <Route path="/myaccount" element={<AccountLogin />} />
 
+
         <Route path="/products" element={<Protected Component={Products} />} />
         <Route path="/about" element={<Protected Component={About} />} />
         <Route path="/faq" element={<Protected Component={FAQ} />} />
         <Route path="/services" element={<Protected Component={Services} />} />
 
+
+        <Route path="/Products" element={<Protected Component={Products} />} />
+
         <Route path="/login" element={<AuthProtected Component={Login} />} />
+
+        <Route path="/myaccount" element={<AuthProtected Component={AccountLogin} />} />
         <Route path="/register" element={<Register />} />
       </Routes>
     </div>

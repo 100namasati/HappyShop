@@ -289,24 +289,6 @@ class ProjectNavbar extends NavbarController {
                           </li>
                         </div>
                       </div>
-                      {/* <li>
-                        <a className="dropdown-item" href="/">
-                          Action
-                        </a>
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="/">
-                          Another action
-                        </a>
-                      </li>
-                      <li>
-                        <hr className="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="/">
-                          Something else here
-                        </a>
-                      </li> */}
                     </ul>
                   </li>
                   <li className="nav-item dropdown">
@@ -325,9 +307,9 @@ class ProjectNavbar extends NavbarController {
                       aria-labelledby="navbarDropdown"
                     >
                       <li>
-                        <a className="dropdown-item" href="/">
-                          Action
-                        </a>
+                        <Link className="dropdown-item" to="/products">
+                         Wooden Product
+                        </Link>
                       </li>
                       <li>
                         <a className="dropdown-item" href="/">
