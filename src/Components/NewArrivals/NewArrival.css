@@ -1,0 +1,93 @@
+.product-div {
+  width: 90%;
+  margin: 10px auto;
+}
+.productContainer {
+  height: auto;
+  width: 200px;
+  position: relative;
+  padding: 10px, auto;
+  background-color: rgb(240, 240, 240);
+}
+.productContainer img {
+  height: 200px;
+  width: 200px;
+}
+.productGird {
+  display: grid;
+  flex-direction: column;
+}
+.productGird {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  padding: 5px;
+  width: 100px;
+}
+.productGird h5 {
+  text-align: center;
+}
+.smallFeature {
+  display: none;
+  /* display: flex; */
+}
+.productContainer:hover .smallFeature {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+  transition-property: display;
+  transition-duration: 10s;
+  transition-timing-function: ease-in;
+}
+.feature-icon {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  margin-left: 12px;
+  font-size: 20px;
+}
+.feature-icon:hover {
+  background-color: coral;
+}
+
+.forth-carosuel-div {
+  display: flex;
+  height: 100px;
+  box-shadow: 3px 3px 3px 3px rgb(188, 188, 188);
+  margin-top: 5px;
+  padding: 5px;
+  justify-content: space-evenly;
+  border-radius: 5px;
+}
+.WgpPQ {
+  width: 222px !important;
+}
+.cjzNGz {
+  background-color: gainsboro !important;
+}
+.gCDpsR {
+  background-color: gainsboro !important;
+}
+.cjzNGz:hover:enabled,
+.cjzNGz:focus:enabled {
+  color: rgb(255, 255, 255);
+  background-color: coral !important;
+  box-shadow: rgb(51, 51, 51) 0px 0px 2px 0px;
+}
+@media screen and (max-width: 1240px) {
+}
+@media screen and (max-width: 768px) {
+  .WgpPQ {
+    width: 215px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .WgpPQ {
+    width: 228px !important;
+  }
+}
