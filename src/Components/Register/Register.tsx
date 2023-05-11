@@ -13,10 +13,10 @@ class Register extends RegisterController {
     return (
       <div className="register-form">
         <div>
-          {this.state.register === true ? (
-            <Space size="large">
-              <Spin size="large" className="register-form-spinner" />
-            </Space>
+        {this.state.loading ? (
+            <Spin tip="Loading" size="large">
+              <div className="content" />
+            </Spin>
           ) : (
             ""
           )}
