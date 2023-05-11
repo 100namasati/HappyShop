@@ -22,7 +22,7 @@ export default class AccountLogin extends Component {
         </div>
      </div>
 
-      <Login/>
+      {/* <Login/> */}
       </div>
     )
   }

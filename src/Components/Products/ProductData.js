@@ -1,0 +1,69 @@
+export const colorCode=[
+    {
+        color:"yellow",
+        active:false,
+    },
+    {
+        color:"purple",
+        active:false,
+    }
+    ,{
+        color:"green",
+        active:false,
+    },
+    {
+        color:"black",
+        active:false,
+    },
+    {
+        color:"pink",
+        active:false,
+    }
+]
+export const productSize=[
+    {
+        sizeValue:"S",
+        active:false
+    },
+    {
+        sizeValue:"M",
+        active:false
+    },
+    {
+        sizeValue:"L",
+        active:false
+    },
+    {
+        sizeValue:"XL",
+        active:false
+    },
+    {
+        sizeValue:"XXL",
+        active:false
+    },
+
+]
+export const productMaterial=[
+    {
+        mateiralValue:"Metal",
+        active:false
+    },
+    {
+        mateiralValue:"Resin",
+        active:false
+    },
+    {
+        mateiralValue:"Leather",
+        active:false
+    },
+    {
+        mateiralValue:"Slag",
+        active:false
+    },
+    {
+        mateiralValue:"Fiber",
+        active:false
+    },
+    
+
+]

@@ -54,7 +54,7 @@ export class LoginController extends Component<Props, States> {
         const errorMessage = error.message;
         const email = error.customData.email;
         const credential = FacebookAuthProvider.credentialFromError(error);
-        console.log(error);
+        console.log("@@@@@====",error);
       });
   };
   handleTwitterLogin=()=>{

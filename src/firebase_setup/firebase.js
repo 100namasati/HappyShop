@@ -18,14 +18,10 @@ const firebaseConfig = {
   messagingSenderId: "8754965641",
   appId: "1:8754965641:web:cecf8bae4991772c036a58",
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const providerFaceBook = new FacebookAuthProvider();
 const provider = new GoogleAuthProvider();
-
 const providerTwitter = new TwitterAuthProvider();
-
 const Auth = getAuth(app);
-
 export { Auth, provider, providerFaceBook ,providerTwitter};
