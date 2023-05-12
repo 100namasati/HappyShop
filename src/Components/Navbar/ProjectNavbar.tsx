@@ -9,11 +9,8 @@ import { Input } from "antd";
 import NavbarController from "./NavbarController";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD:src/Components/Navbar/ProjectNavbar.tsx
 import Protected from "./Protected";
 import { withRouter } from "../../HOC";
-=======
->>>>>>> origin:src/Component/ProjectNavbar.tsx
 const { Search } = Input;
 
 class ProjectNavbar extends NavbarController {
@@ -43,17 +40,12 @@ class ProjectNavbar extends NavbarController {
             />
           </div>
           <div className="navbar-features">
-<<<<<<< HEAD:src/Components/Navbar/ProjectNavbar.tsx
             <div className="navbar-features-usericon-container">
-=======
-            <div  className="navbar-features-usericon-container">
->>>>>>> origin:src/Component/ProjectNavbar.tsx
               <FaUser
                 className="user-profile-icon"
                 onClick={this.openUserMenu}
               />
               {this.state.openMenu ? (
-<<<<<<< HEAD:src/Components/Navbar/ProjectNavbar.tsx
                 <div className="user-menu" ref={this.componentRef}>
                   <ul className="user-menu-list">
                     <Link
@@ -125,25 +117,6 @@ class ProjectNavbar extends NavbarController {
                         <li>Login/Register</li>
                       </Link>
                     )}
-=======
-                <div className="user-menu">
-                  <ul className="user-menu-list">
-                    <Link to={"/"} className="user-menu-list-item">
-                      <li>My Account</li>
-                    </Link>
-                    <Link to={"/"} className="user-menu-list-item">
-                      <li>Wishlist</li>
-                    </Link>
-                    <Link to={"/"} className="user-menu-list-item">
-                      <li>Compare</li>
-                    </Link>
-                    <Link to={"/"} className="user-menu-list-item">
-                      <li>Search</li>
-                    </Link>
-                    <Link to={"/"} className="user-menu-list-item">
-                      <li>Login</li>
-                    </Link>
->>>>>>> origin:src/Component/ProjectNavbar.tsx
                   </ul>
                 </div>
               ) : (
