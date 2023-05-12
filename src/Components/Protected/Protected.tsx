@@ -24,8 +24,6 @@ export const AuthProtected = (props: any) => {
     let user = localStorage.getItem("token");
     if (!user) {
       Navigate("/login");
-    } else {
-      Navigate("/");
     }
   }, [Navigate]);
   return (
