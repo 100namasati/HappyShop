@@ -4,8 +4,9 @@ export interface states {
   activeThumb:any,
   modalOpen:boolean,
   productColorData:any,
-  productSizeData:any
-  productMaterialData:any
+  productSizeData:any,
+  productMaterialData:any,
+
 }
 export type Props = {
     // images:any
@@ -18,7 +19,9 @@ export default class second extends React.Component<Props, states> {
     modalOpen: false,
     productColorData:colorCode,
     productSizeData:productSize,
-    productMaterialData:productMaterial
+    productMaterialData:productMaterial,
+
+
     };
   }
   

@@ -12,6 +12,7 @@ import AccountLogin from "./Components/MyAccount/AccountLogin";
 import About from "./Components/About/About";
 import FAQ from "./Components/FAQ's/FAQ";
 import Services from "./Components/Services/Services";
+import ContactUs from "./Components/Contact/ContactUs";
 function App(props: any) {
   return (
     <div className="App">
@@ -28,6 +29,7 @@ function App(props: any) {
 
 
         <Route path="/Products" element={<Protected Component={Products} />} />
+        <Route path="/ContactUs" element={<Protected Component={ContactUs} />} />
         <Route path="/myaccount" element={<AuthProtected Component={AccountLogin} />} />
         <Route path="/login" element={<AuthProtected Component={Login} />} /> 
         <Route path="/register" element={<Register />} />
