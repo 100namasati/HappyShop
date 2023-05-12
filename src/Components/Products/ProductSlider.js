@@ -3,6 +3,7 @@ import React, { Component, useState } from 'react'
 import {SwiperButton, SwipperButton2}from './SwiperButton';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination ,Thumbs} from 'swiper';
+import {MdZoomOutMap} from 'react-icons/md'
 import ProductController from "./ProductController";
 import { Button, Modal } from 'antd';
 import '../Products/Products.css'
@@ -63,6 +64,7 @@ import './Products.css'
 const ProductSlider = (props) => {
     const [activeThumb,setActiveThumb]=useState()
     const [modalOpen, setModalOpen]=useState(false)
+    const [modalImage, setModalImage]=useState("")
   return (
     <div>
          <div className="product-slider">
@@ -74,28 +76,29 @@ const ProductSlider = (props) => {
             grabCursor={true}
             thumbs={{ swiper: activeThumb }}
        >
-         {
+            {
                 props.images.map((item, index) => (
                     <SwiperSlide key={index}>
+                    
+                        <Button onClick={() =>{
+                         setModalImage(item)
+                      
+                           setModalOpen(true)}} style={{position:"absolute",left:"10px"}}>
+                        {<MdZoomOutMap style={{fontSize:"20px"}}/>}
+                       </Button>
                         <img src={item} alt="product images" style={{height:"350px", width:"500px", marginBottom:"20px"}} />
+                        <Modal centered open={modalOpen} onCancel={() => setModalOpen(false)} footer={null}>
+                        <img src={modalImage} alt="product images" style={{height:"350px", width:"500px", marginBottom:"20px"}} />
+                        </Modal>
+                        
                     </SwiperSlide>
                 ))
             }
-            <Button type="primary" onClick={() => setModalOpen(true)}>
-        Vertically centered modal dialog
-      </Button>
+            {/* <Button type="primary" onClick={() => setModalOpen(true)}>
+                Vertically centered modal dialog
+            </Button> */}
       
-      <Modal
-        title="Vertically centered modal dialog"
-        centered
-        open={modalOpen}
-        onOk={() => setModalOpen(false)}
-        onCancel={() => setModalOpen(false)}
-      >
-        <p>some contents...</p>
-        <p>some contents...</p>
-        <p>some contents...</p>
-      </Modal>
+     
             
             {/* <SwiperButton/> */}
        </Swiper>
@@ -111,7 +114,11 @@ const ProductSlider = (props) => {
                 props.images.map((item, index) => (
                     <SwiperSlide key={index}>
                         <div className="product-images-slider-thumbs-wrapper">
-                            <img src={item} alt="product images" style={{height:"100%", width:"100%"}}/>
+                            <img src={item} alt="product images" style={{height:"100%", width:"100%"}}/>   
+                        
+                        {/* <Modal centered open={modalOpen} onCancel={() => setModalOpen(false)}>
+                            <img src={item} alt="product images" style={{height:"350px", width:"500px", marginBottom:"20px"}} />
+                        </Modal> */}
                         </div>
                     </SwiperSlide>
                 ))

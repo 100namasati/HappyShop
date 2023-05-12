@@ -129,7 +129,7 @@ export class Login extends LoginController {
                       </Form.Item>
                     </Col>
                     <Col lg={24} md={24} sm={24} className="social-section">
-                      <hr />
+                      <hr className="login-horizontal"/>
                       <h6>Or sign Up with</h6>
                     </Col>
                     <Col lg={24} md={24} sm={24} className="socialLogin">

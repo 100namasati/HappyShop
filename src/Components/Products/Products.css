@@ -213,4 +213,9 @@ a{
 .colorGreen{
   background-color: green;
 }
-
+/* Css for modal carousel */
+.product-slider .ant-btn-default {
+  background-color: transparent;
+ border:none;
+ box-shadow: none;
+}
