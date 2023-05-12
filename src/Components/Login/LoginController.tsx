@@ -129,6 +129,7 @@ export class LoginController extends Component<Props, States> {
           const errorCode = error.code;
           const errorMessage = error.message;
           console.log(error.message);
+          this.setState({ loading: false });
         });
     });
   };
