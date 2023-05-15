@@ -153,7 +153,7 @@ export default class Products extends ProductController {
             </div>
           </div>
         </div>
-        <button onClick={()=>this.payment()}>Buy Now</button>
+        <button onClick={()=>this.payment()} className="buy-Message-button">Buy Now</button>
       </div>
     );
   };
