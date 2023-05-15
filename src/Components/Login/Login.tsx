@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import { Form, Input, Button, Row, Col, Spin } from "antd";
 import "./Login.css";
 import LoginController from "./LoginController";
@@ -32,7 +31,9 @@ export class Login extends LoginController {
             >
               Login
             </h1>
-            <p>Please Login using account detail below.</p>
+            <p style={{ textAlign: "center" }}>
+              Please Login using account detail below.
+            </p>
 
             <Form
               name="basic"

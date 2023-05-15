@@ -25,10 +25,11 @@
     justify-content: space-between !important;
 }
 .faq-container .faq-panel-icon{
-    font-size: 22px;
+    font-size: 25px;
     background-color: rgb(242, 246, 247);
     padding: 15px;
-    font-weight: 600;
+    font-weight: 500;
+    margin-top: 15px;
     
 }
 .faq-container .faq-panel-icon-minus{

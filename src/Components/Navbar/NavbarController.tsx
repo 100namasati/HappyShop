@@ -1,15 +1,15 @@
 import React from "react";
 import {
   getAuth,
-  GoogleAuthProvider,
-  FacebookAuthProvider,
+  // GoogleAuthProvider,
+  // FacebookAuthProvider,
   signOut,
 } from "firebase/auth";
-import {
-  Auth,
-  provider,
-  providerFaceBook,
-} from "../../firebase_setup/firebase";
+// import {
+//   Auth,
+//   provider,
+//   providerFaceBook,
+// } from "../../firebase_setup/firebase";
 
 export interface states {
   drawer: boolean;

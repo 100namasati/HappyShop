@@ -1,0 +1,107 @@
+.serices-main-container{
+    width: 90%;
+    margin: auto;
+}
+.services-card-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+   width: 97%;
+   margin: auto;
+    padding: 30px 20px;
+    border: 2px solid rgb(228, 236, 242);
+    height: 350px;
+    transition: 0.5s ease-out linear;
+}
+.services-card-wrapper:hover .service-card-button{
+    color: #eb6954 !important;
+
+}
+.services-card-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: #eb6954;
+    transition: width 0.3s ease;
+  }
+  
+  .services-card-wrapper:hover::after {
+   
+    width: 100%;
+  }
+  .services-card-wrapper:hover {
+    box-shadow: 0px 0px 15px 5px rgba(193, 191, 191, 0.582);
+  }
+.services-card-wrapper img{
+    width: 100px;
+    height: 100px;
+    
+}
+.services-card-wrapper h3,p{
+    text-align: start;
+    
+    
+}
+.services-card-wrapper h3{
+    font-weight: 600;
+}
+.services-card-wrapper p{
+    font-size: 15px;
+    font-size: 400;
+}
+.service-card-button{
+    border: none;
+    text-align: start;
+    background:none ;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(140, 178, 178);
+    
+}
+.services-bottom-section{
+    margin: 100px 0px;
+    background-color: rgb(242, 244, 245);
+    padding: 30px 0px;
+}
+.services-bottom-section h6, h1,.services-bottom-section-button-wrapper{
+    margin: 25px 0px;
+}
+
+.services-bottom-section-button-wrapper .btn-one{
+    width: 200px;
+    height: 70px;
+   
+    margin-right: 20px;
+    border: none;
+    background-color: #eb6954;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+.services-bottom-section-button-wrapper .btn-one:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 15px 5px rgba(193, 191, 191, 0.582);
+
+}
+.services-bottom-section-button-wrapper .btn-two:hover {
+    background-color: #eb6954;
+    color: white;
+    box-shadow: 0px 0px 15px 5px rgba(193, 191, 191, 0.582);
+
+}
+.services-bottom-section-button-wrapper .btn-two{
+    width: 200px;
+    height: 70px;
+   
+    margin-right: 20px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-size: 17px;
+    font-weight: 600;
+}

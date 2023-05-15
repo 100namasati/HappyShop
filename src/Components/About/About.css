@@ -1,0 +1,226 @@
+.about-hero-section-left-text{
+    padding: 60px 20px;
+}
+.about-hero-section-left-text h5,.about-hero-section-left-text h1{
+    text-align: left;
+    font-weight: 700;
+}
+.about-hero-section-left-text h1{
+    font-size: 40px;
+}
+.about-hero-section-left-text h5{
+    font-size: 24px;  
+}
+.about-hero-section-left-text p{
+    font-size: 18px;
+    line-height: 30px;
+    text-align: left;
+    margin: 15px 0px;
+
+}
+.hero-section-video-image-container{
+    width: 100%;
+    height: 600px;
+    background-image: url('../../Images//video-bgimg.webp');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.hero-section-video-play-image-container{
+    padding: 15px;
+    border: 3px solid rgb(226, 234, 240);
+}
+.hero-section-video-play-image-container img{
+    background-color: white;
+}
+/* .hero-section-video-play-image{
+    border-color:  4px solid rgb(226, 234, 240);
+} */
+.hero-section-video-play-image-container:hover{
+    border: 3px solid tomato;
+}
+.about-journey-section-container{
+    width: 90%;
+    position: relative;
+    margin:200px auto;
+    background-color: rgb(242, 246, 247);
+    padding: 150px;
+}
+.about-journey-section-year-item{
+    width: 120px;
+    height: 120px;
+    color: white;
+    background-color: rgb(7, 28, 30);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: -110px; */
+}
+.about-journey-section-year-item:hover{
+    width: 120px;
+    height: 120px;
+    color: tomato;
+    background-color:white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none !important;
+}
+.about-journey-section-year-item:hover .about-journey-section-year-item h6{
+    color: tomato;
+}
+.about-journey-section-year-item h6{
+    font-size: 23px; 
+}
+.ant-popconfirm-buttons button {
+   display: none;
+}
+.ant-popconfirm-message {
+    font-size: 17px !important;
+}
+
+.ant-popconfirm-description{
+    font-size: 19px !important;
+}
+.ant-popover .ant-popover-inner {
+    height: 200px !important;
+    width: 500px !important;
+}
+.ant-btn-default:not(:disabled):hover {
+    color: tomato !important;
+}
+.about-team-container{
+    margin: 100px 0px;
+}
+.about-team-card{
+    margin: auto;
+    width: 270px !important;
+    background-color: white;
+}
+.about-team-card:hover{
+    margin: auto;
+    width: 270px !important;
+    background-color: rgb(7, 28, 30);
+}
+.about-team-card:hover .team-name{
+    color: white !important;
+}
+.about-team-card img{
+   width: 200px;
+   width: 200px;
+   border-radius: 50%;
+   margin: 30px 0px;
+}
+.about-team-card h6{
+    font-size: 19px;
+    color: tomato;
+}
+.about-team-card h3{
+    color: black;
+}
+.about-creativeDesign-logo{
+    padding: 100px 0px;
+}
+.about-creativeDesign-logo img:hover {
+    animation: cardhover 0.5s ease-in;
+  }
+@keyframes cardhover {
+    0% {
+      transform: scale(100%);
+    }
+    100% {
+      transform: scale(110%);
+    }
+  }
+.about-carousel-card{
+    /* width: 800px; */
+    /* height: 300px; */
+    border: 1px solid rgb(229, 234, 238);
+    padding: 30px 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+.card-content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.about-carousel-card img{
+    width: 180px;
+    height: 180px;
+}
+.about-carousel-card h5{
+    text-align: start;
+    font-weight: 600;
+}
+.about-carousel-card p{
+    text-align: start;
+    font-size: 20px;
+    font-weight: 500;
+}
+.swiper-slide, swiper-slide {
+    width: 600px !important;
+}
+.swiper-button-next:after {
+    background-color: white;
+    padding: 10px 22px !important;
+    border-radius: 50% !important;
+    
+}
+.swiper-button-next:hover:after {
+    background-color: coral;
+    padding: 10px 22px !important;
+    border-radius: 50% !important;
+    color: white !important;
+}
+.swiper-button-prev:after {
+    background-color: white;
+    padding: 10px 22px !important;
+    border-radius: 50% !important;
+}
+.swiper-button-prev:hover:after {
+    background-color: coral;
+    padding: 10px 22px !important;
+    border-radius: 50% !important;
+    color: white !important;
+}
+.middleContainer {
+    width: 90%;
+    margin: 10px auto;
+  }
+  .firstRow {
+    border: 1px solid gainsboro;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+.middleItem {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-evenly;
+  }
+  .middleIcon {
+    font-size: 40px;
+  }
+  .middleText {
+    text-align: left;
+  }
+  .ant-modal .ant-modal-content{
+    padding:  0px !important;
+  }
+  .ant-modal{
+    width: 650px !important;
+  }
+  .ant-modal .ant-modal-close-x {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: -110px !important;
+    margin-left: 300px !important;
+    padding: 12px 18px !important;
+    border-radius: 50% !important;
+    border: 1px solid white !important;
+  }

@@ -1,12 +1,6 @@
-import React, { Component } from "react";
 import "./FAQ.css";
 import { Collapse } from "antd";
-import {
-  MinusOutlined,
-  PhoneFilled,
-  PhoneOutlined,
-  PlusOutlined,
-} from "@ant-design/icons";
+import { MinusOutlined, PhoneFilled, PlusOutlined } from "@ant-design/icons";
 import FAQController from "./FAQController";
 const { Panel } = Collapse;
 
@@ -21,15 +15,9 @@ export class FAQ extends FAQController {
             expandIconPosition="right"
             expandIcon={({ isActive }) =>
               isActive ? (
-                <MinusOutlined
-                  className="faq-panel-icon faq-panel-icon-minus"
-                  style={{ fontSize: "25px", fontWeight: 500 }}
-                />
+                <MinusOutlined className="faq-panel-icon faq-panel-icon-minus" />
               ) : (
-                <PlusOutlined
-                  className="faq-panel-icon "
-                  style={{ fontSize: "20px", fontWeight: 500 }}
-                />
+                <PlusOutlined className="faq-panel-icon " />
               )
             }
           >

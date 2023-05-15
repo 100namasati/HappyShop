@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import {
   Auth,
   provider,
@@ -6,10 +6,10 @@ import {
   providerTwitter,
 } from "../../firebase_setup/firebase";
 import {
-  GoogleAuthProvider,
+  // GoogleAuthProvider,
   signInWithPopup,
-  FacebookAuthProvider,
-  TwitterAuthProvider,
+  // FacebookAuthProvider,
+  // TwitterAuthProvider,
   signInWithEmailAndPassword,
 } from "firebase/auth";
 interface States {
@@ -45,10 +45,10 @@ export class LoginController extends Component<Props, States> {
         }
       })
       .catch((error) => {
-        const errorCode = error.code;
+        // const errorCode = error.code;
         const errorMessage = error.message;
-        const email = error.customData.email;
-        const credential = GoogleAuthProvider.credentialFromError(error);
+        // const email = error.customData.email;
+        // const credential = GoogleAuthProvider.credentialFromError(error);
         alert(errorMessage);
         this.props.router.navigate("/login");
       });
@@ -69,10 +69,12 @@ export class LoginController extends Component<Props, States> {
         }
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.customData.email;
-        const credential = FacebookAuthProvider.credentialFromError(error);
+        // const errorCode = error.code;
+        // const errorMessage = error.message;
+        // const email = error.customData.email;
+        // const credential = FacebookAuthProvider.credentialFromError(error);
+        alert(error.message);
+
         console.log(error);
       });
   };
@@ -91,10 +93,11 @@ export class LoginController extends Component<Props, States> {
         }
       })
       .catch((error) => {
-        const errorCode = error.code;
+        // const errorCode = error.code;
         const errorMessage = error.message;
-        const email = error.customData.email;
-        const credential = TwitterAuthProvider.credentialFromError(error);
+        // const email = error.customData.email;
+        // const credential = TwitterAuthProvider.credentialFromError(error);
+        alert(errorMessage);
         console.log(error);
 
         // ...
@@ -121,13 +124,14 @@ export class LoginController extends Component<Props, States> {
             // this.forceUpdate();
             console.log("logged in");
 
-            await this.props.router.navigate("/products");
+            await this.props.router.navigate("/");
           }
           this.setState({ loading: false });
         })
         .catch((error) => {
-          const errorCode = error.code;
+          // const errorCode = error.code;
           const errorMessage = error.message;
+          alert(errorMessage);
           console.log(error.message);
           this.setState({ loading: false });
         });
