@@ -31,6 +31,7 @@ export default class Products extends ProductController {
       </div>
     );
   };
+ 
   renderProductDetails = () => {
     return (
       <div className="prodcut-details">
@@ -152,6 +153,7 @@ export default class Products extends ProductController {
             </div>
           </div>
         </div>
+        <button onClick={()=>this.payment()}>Buy Now</button>
       </div>
     );
   };
@@ -159,13 +161,13 @@ export default class Products extends ProductController {
     return (
       <div className="product-container">
         <Row>
-          <Col lg={12} md={12} sm={24} xs={24}>
+          <Col lg={12} md={24} sm={24} xs={24}>
             <div className="product-preview">
               <ProductSlider images={productImages} />
             </div>
           </Col>
 
-          <Col lg={12} md={12} sm={24} xs={24}>
+          <Col lg={12} md={24} sm={24} xs={24}>
             {this.renderProductDetails()}
           </Col>
         </Row>
@@ -173,9 +175,10 @@ export default class Products extends ProductController {
     );
   };
   render() {
+    
     // console.log(this.state.productColorData);
     return (
-      <div>
+      <div className="product-screen">
         {this.renderProductNavbar()}
         {this.renderProduct()}
       </div>

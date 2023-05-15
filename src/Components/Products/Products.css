@@ -1,3 +1,6 @@
+.product-screen{
+  width:100vw;
+}
 .product-Navbar{
     background-color: rgb(242, 246, 247);
     height: 100px;
@@ -36,17 +39,18 @@ a{
     display: flex;
     margin: 50px;
     justify-content: space-between;
+    /* height: auto; */
 }
 .product-preview{
     display: flex;
     flex-direction: column;
+    /* width: 550px; */
 }
-
 .product-slider{
-    height: 350px;
+    /* height:300px; */
     width: 500px;
     margin-bottom: 20px;
-    background-color:rgb(242, 246, 247);
+    /* background-color:rgb(242, 246, 247); */
 }
     .swiper {
     padding: 2rem;
@@ -100,7 +104,7 @@ a{
   /* product details css */
   .prodcut-details{
     display: flex;
-    width: 50%;
+    width: 100%;
 
     align-items: flex-start;
     flex-direction: column;
@@ -218,4 +222,14 @@ a{
   background-color: transparent;
  border:none;
  box-shadow: none;
+}
+@media(max-width:1200px){
+  .product-container{
+   flex-direction: column;
+   /* width: 100% !important; */
+  }
+  .product-preview{
+    justify-content: center;
+    align-items: center;
+  }
 }
