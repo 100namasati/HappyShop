@@ -161,27 +161,27 @@
     font-size: 20px;
     font-weight: 500;
 }
-.swiper-slide, swiper-slide {
+.about-client-feedback.swiper-slide {
     width: 600px !important;
 }
-.swiper-button-next:after {
+.about-client-feedback .swiper-button-next:after {
     background-color: white;
     padding: 10px 22px !important;
     border-radius: 50% !important;
     
 }
-.swiper-button-next:hover:after {
+.about-client-feedback .swiper-button-next:hover:after {
     background-color: coral;
     padding: 10px 22px !important;
     border-radius: 50% !important;
     color: white !important;
 }
-.swiper-button-prev:after {
+.about-client-feedback .swiper-button-prev:after {
     background-color: white;
     padding: 10px 22px !important;
     border-radius: 50% !important;
 }
-.swiper-button-prev:hover:after {
+.about-client-feedback .swiper-button-prev:hover:after {
     background-color: coral;
     padding: 10px 22px !important;
     border-radius: 50% !important;

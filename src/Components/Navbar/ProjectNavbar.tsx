@@ -43,8 +43,7 @@ class ProjectNavbar extends NavbarController {
             <div className="navbar-features-usericon-container">
               <FaUser
                 className="user-profile-icon"
-                // onClick={this.openUserMenu}
-                onMouseOver={this.openUserMenu}
+                onClick={this.openUserMenu}
               />
               {this.state.openMenu ? (
                 <div className="user-menu" ref={this.componentRef}>
