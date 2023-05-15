@@ -1,7 +1,7 @@
 import { Component } from "react";
 
 import {
-  GoogleAuthProvider,
+  // GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
@@ -9,7 +9,6 @@ import { Auth } from "../../firebase_setup/firebase";
 import { providerTwitter } from "../../firebase_setup/firebase";
 import { provider } from "../../firebase_setup/firebase";
 import { providerFaceBook } from "../../firebase_setup/firebase";
-import React from "react";
 interface States {
   name: string;
   email: string;
@@ -60,10 +59,9 @@ export class RegisterController extends Component<Props, States> {
         }
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
-        const email = error.customData.email;
-        const credential = GoogleAuthProvider.credentialFromError(error);
+        // const email = error.customData.email;
+        // const credential = GoogleAuthProvider.credentialFromError(error);
         alert(errorMessage);
         this.props.router.navigate("/login");
       });
@@ -84,9 +82,10 @@ export class RegisterController extends Component<Props, States> {
         }
       })
       .catch((error: any) => {
-        const errorCode = error.code;
+        // const errorCode = error.code;
         const errorMessage = error.message;
-        const email = error.customData.email;
+        // const email = error.customData.email;
+        alert(errorMessage);
         console.log(error);
       });
   };

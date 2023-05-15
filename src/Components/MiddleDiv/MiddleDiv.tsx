@@ -54,7 +54,7 @@ export default class MiddleDiv extends Component {
                   <div className="leftMiddleItem">
                     <h3>Bowl & Spoon</h3>
                     <p>Wooden Product</p>
-                    <a href="#">Explore All</a>
+                    <a href="/">Explore All</a>
                   </div>
                   <div className="rightMiddleItem">
                     <img src={Bowl} alt="Bowl" />
@@ -68,7 +68,7 @@ export default class MiddleDiv extends Component {
                   <div className="leftMiddleItem">
                     <h3>Colorful Kattel</h3>
                     <p>Ceramic Product</p>
-                    <a href="#">Explore All</a>
+                    <a href="/">Explore All</a>
                   </div>
                   <div className="rightMiddleItem">
                     <img src={Kattle} alt="Kattle" />

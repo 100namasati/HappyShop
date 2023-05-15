@@ -43,7 +43,8 @@ class ProjectNavbar extends NavbarController {
             <div className="navbar-features-usericon-container">
               <FaUser
                 className="user-profile-icon"
-                onClick={this.openUserMenu}
+                // onClick={this.openUserMenu}
+                onMouseOver={this.openUserMenu}
               />
               {this.state.openMenu ? (
                 <div className="user-menu" ref={this.componentRef}>
@@ -174,7 +175,7 @@ class ProjectNavbar extends NavbarController {
                   <li className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
-                      href="#"
+                      href="/"
                       id="navbarDropdown"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -187,32 +188,32 @@ class ProjectNavbar extends NavbarController {
                       aria-labelledby="navbarDropdown"
                     >
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Home Section #01
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Home Section #01
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Home Section #02
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Home Section #03
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Home Section #04
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Home Section #05
                         </a>
                       </li>
@@ -221,7 +222,7 @@ class ProjectNavbar extends NavbarController {
                   <li className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
-                      href="#"
+                      href="/"
                       id="navbarDropdown"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -236,66 +237,66 @@ class ProjectNavbar extends NavbarController {
                       <div className="menu-container-list">
                         <div className="menu-list">
                           <li>
-                            <a className="dropdown-item" href="#">
+                            <a className="dropdown-item" href="/">
                               Action
                             </a>
                           </li>
                           <li>
-                            <a className="dropdown-item" href="#">
+                            <a className="dropdown-item" href="/">
                               Another action
                             </a>
                           </li>
 
                           <li>
-                            <a className="dropdown-item" href="#">
+                            <a className="dropdown-item" href="/">
                               Something else here
                             </a>
                           </li>
                         </div>
                         <div className="menu-list">
                           <li>
-                            <a className="dropdown-item" href="#">
+                            <a className="dropdown-item" href="/">
                               Action
                             </a>
                           </li>
                           <li>
-                            <a className="dropdown-item" href="#">
+                            <a className="dropdown-item" href="/">
                               Another action
                             </a>
                           </li>
 
                           <li>
-                            <a className="dropdown-item" href="#">
+                            <a className="dropdown-item" href="/">
                               Something else here
                             </a>
                           </li>
                         </div>
                         <div className="menu-list">
                           <li>
-                            <a className="dropdown-item" href="#">
+                            <a className="dropdown-item" href="/">
                               Action
                             </a>
                           </li>
                           <li>
-                            <a className="dropdown-item" href="#">
+                            <a className="dropdown-item" href="/">
                               Another action
                             </a>
                           </li>
 
                           <li>
-                            <a className="dropdown-item" href="#">
+                            <a className="dropdown-item" href="/">
                               Something else here
                             </a>
                           </li>
                         </div>
                       </div>
                       {/* <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Action
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Another action
                         </a>
                       </li>
@@ -303,7 +304,7 @@ class ProjectNavbar extends NavbarController {
                         <hr className="dropdown-divider" />
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Something else here
                         </a>
                       </li> */}
@@ -312,7 +313,7 @@ class ProjectNavbar extends NavbarController {
                   <li className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
-                      href="#"
+                      href="/"
                       id="navbarDropdown"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -325,12 +326,12 @@ class ProjectNavbar extends NavbarController {
                       aria-labelledby="navbarDropdown"
                     >
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Action
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Another action
                         </a>
                       </li>
@@ -338,7 +339,7 @@ class ProjectNavbar extends NavbarController {
                         <hr className="dropdown-divider" />
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Something else here
                         </a>
                       </li>
@@ -347,7 +348,7 @@ class ProjectNavbar extends NavbarController {
                   <li className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
-                      href="#"
+                      href="/"
                       id="navbarDropdown"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -360,12 +361,12 @@ class ProjectNavbar extends NavbarController {
                       aria-labelledby="navbarDropdown"
                     >
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Action
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Another action
                         </a>
                       </li>
@@ -373,21 +374,21 @@ class ProjectNavbar extends NavbarController {
                         <hr className="dropdown-divider" />
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <a className="dropdown-item" href="/">
                           Something else here
                         </a>
                       </li>
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#">
+                    <a className="nav-link" href="/">
                       Blogs
                     </a>
                   </li>
                   <li className="nav-item dropdown">
                     <a
                       className="nav-link dropdown-toggle"
-                      href="#"
+                      href="/"
                       id="navbarDropdown"
                       role="button"
                       data-bs-toggle="dropdown"
@@ -400,22 +401,21 @@ class ProjectNavbar extends NavbarController {
                       aria-labelledby="navbarDropdown"
                     >
                       <li>
-                        <a className="dropdown-item" href="#">
-                          Action
-                        </a>
+                        <Link className="dropdown-item" to="/about">
+                          About
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
-                          Another action
-                        </a>
+                        <Link className="dropdown-item" to="/contact">
+                          Contact
+                        </Link>
                       </li>
+
                       <li>
-                        <hr className="dropdown-divider" />
-                      </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          Something else here
-                        </a>
+                        <Link className="dropdown-item" to="/services">
+                          <Badge></Badge>
+                          Services
+                        </Link>
                       </li>
                     </ul>
                   </li>

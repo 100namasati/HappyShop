@@ -36,7 +36,7 @@ export class HomeSilder extends Component {
                   <button>Shop Now</button>
                 </div>
                 <div className="right-carousel-image">
-                  <img src={woolen} alt="Coffee Image" />
+                  <img src={woolen} alt="Coffee_Image" />
                 </div>
               </div>
             </SwiperSlide>
@@ -54,7 +54,7 @@ export class HomeSilder extends Component {
                 </div>
                 <div className="right-carousel-image">
                   <p>
-                    <img src={coffee} alt="Coffee Image" />
+                    <img src={coffee} alt="Coffee_Image" />
                   </p>
                 </div>
               </div>
