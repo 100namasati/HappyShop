@@ -187,7 +187,7 @@ export class About extends AboutController {
           </Row>
         </div>
         <div>
-          <Row>
+          <Row className="about-client-feedback">
             <Col lg={24} md={24} sm={24} xs={24}>
               <h1>Client Feedback</h1>
               <p>The valuable opinion of our clients.</p>
