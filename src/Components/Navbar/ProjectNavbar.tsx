@@ -240,7 +240,7 @@ class ProjectNavbar extends NavbarController {
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to="/contact">
+                        <Link className="dropdown-item" to="/ContactUs">
                           Contact
                         </Link>
                       </li>
