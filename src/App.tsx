@@ -13,13 +13,18 @@ import AccountLogin from "./Components/MyAccount/AccountLogin";
 import About from "./Components/About/About";
 import FAQ from "./Components/FAQ's/FAQ";
 import Services from "./Components/Services/Services";
+import Footer from "./Components/Footer/Footer";
 function App(props: any) {
   return (
     <div className="App">
       <ProjectNavbar router={undefined} />
       <Routes>
         <Route path="/" element={<Protected Component={Home} />} />
-        <Route path="/myaccount" element={<AccountLogin />} />
+        {/* <Route path="/myaccount" element={<AccountLogin />} /> */}
+        <Route
+          path="/myaccount"
+          element={<Protected Component={AccountLogin} />}
+        />
 
         <Route path="/products" element={<Protected Component={Products} />} />
         <Route path="/about" element={<Protected Component={About} />} />
@@ -30,6 +35,7 @@ function App(props: any) {
 
         <Route path="/register" element={<Register />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

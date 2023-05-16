@@ -13,7 +13,6 @@ export default class Home extends Component {
         <MiddleDiv />
         <NewArrival />
         <SubsriberComponent />
-        <Footer />
       </div>
     );
   }

@@ -13,6 +13,7 @@
     border: 2px solid rgb(228, 236, 242);
     height: 350px;
     transition: 0.5s ease-out linear;
+    text-align: start;
 }
 .services-card-wrapper:hover .service-card-button{
     color: #eb6954 !important;
@@ -41,11 +42,7 @@
     height: 100px;
     
 }
-.services-card-wrapper h3,p{
-    text-align: start;
-    
-    
-}
+
 .services-card-wrapper h3{
     font-weight: 600;
 }
